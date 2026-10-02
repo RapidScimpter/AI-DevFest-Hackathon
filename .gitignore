@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/*.csv
+data/profiles.json
+models/*.joblib
+models/metrics.json

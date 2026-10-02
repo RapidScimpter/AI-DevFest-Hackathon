@@ -1,111 +1,134 @@
-# 🤖 AI DevFest Hackathon
+# AccountGuard AI — beginner setup guide
 
-Welcome to our **AI DevFest Hackathon** project! 🚀
+A runnable ML prototype for detecting possible account takeover in mobile financial services. It generates synthetic events, trains a Random Forest, and presents transaction scoring in Streamlit. No real customers, financial transactions, OTPs, or upay integration are involved.
 
-This repository contains the source code, documentation, and resources developed by our team during the **AI DevFest Hackathon**.
+## 1. Install the tools
 
-## 📌 Project Overview
+Install Python 3.11 or 3.12 from https://www.python.org/downloads/ . On Windows, select **Add Python to PATH** during installation. Install VS Code from https://code.visualstudio.com/ . Install Git from https://git-scm.com/downloads/ if using terminal Git, or use GitHub Desktop.
 
-Our goal is to build an innovative **AI-powered solution** that addresses a real-world problem using modern Artificial Intelligence technologies.
+## 2. Extract and open this project
 
-The project will focus on creating a practical, user-friendly, and scalable solution while demonstrating the capabilities of AI.
+Extract AccountGuard-AI.zip. Open the extracted **AccountGuard-AI** folder in VS Code using File → Open Folder. Choose Terminal → New Terminal. The terminal must be inside the folder containing requirements.txt and app.py. Do not type the Markdown backticks around commands.
 
-## 🎯 Objectives
+## 3. Create a Python environment
 
-* Solve a real-world problem using AI
-* Develop a functional prototype within the hackathon
-* Apply AI/ML technologies effectively
-* Create an intuitive and user-friendly interface
-* Demonstrate the project's potential for real-world use
+Windows Command Prompt (in VS Code choose the terminal dropdown → Command Prompt):
 
-## 🛠️ Technologies
-
-The technologies used in this project may include:
-
-* **Python**
-* **Artificial Intelligence / Machine Learning**
-* **Deep Learning**
-* **Natural Language Processing (NLP)**
-* **Computer Vision**
-* **Web Technologies**
-* **Database Technologies**
-
-> Technologies will be updated as the project develops.
-
-## 📂 Project Structure
-
-```text
-AI-DevFest-Hackathon/
-│
-├── README.md
-├── src/
-│   ├── frontend/
-│   ├── backend/
-│   └── ai/
-│
-├── data/
-├── models/
-├── documentation/
-└── requirements.txt
+```bat
+py -3 -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install -r requirements.txt
 ```
 
-## 🚀 Getting Started
+If `py` is unavailable, try `python -m venv .venv` for the first command.
 
-### 1. Clone the repository
+macOS/Linux:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-### 2. Navigate to the project
+The environment keeps this project's packages together. Internet access is needed to install packages; the demo needs no external API key.
+
+## 4. Generate the data
 
 ```bash
-cd YOUR-REPOSITORY
+python src/generate_data.py
 ```
 
-### 3. Install dependencies
+Expected: `Created 24000 events and 600 synthetic profiles.` This creates data/transactions.csv and data/profiles.json. Do not edit the label to influence a prediction. The label is used only for training and evaluation.
+
+## 5. Train and evaluate
 
 ```bash
-pip install -r requirements.txt
+python src/train.py
 ```
 
-### 4. Run the project
+This creates models/model.joblib and models/metrics.json. It prints precision, recall, F1, average precision (PR-AUC summary), false-positive rate and confusion matrix. The confusion matrix has rows actual normal/attack and columns predicted normal/attack. The model uses a fixed 0.40 review threshold; high risk starts at 0.70.
+
+Different users are held out for testing. User IDs, transaction IDs and labels are never model inputs. Trusted profiles stand in for an earlier enrollment/history period; this first version does not compute rolling history from timestamps.
+
+## 6. Run a basic check
 
 ```bash
-python main.py
+python tests/smoke.py
 ```
 
-> Setup and execution instructions will be updated as the project develops.
+Expected: `Smoke checks passed` and two scores. A conspicuous attack should score above a normal transfer, and amounts above balance should be rejected.
 
-## 📋 Development Workflow
-
-We use **Git and GitHub** for collaborative development.
-
-Each member should work on a separate branch:
+## 7. Open the dashboard
 
 ```bash
-git checkout -b feature-name
+python -m streamlit run app.py
 ```
 
-After completing a feature:
+Open the Local URL printed in the terminal, usually http://localhost:8501 . Leave the terminal running. Press Ctrl+C to stop it.
+
+1. Select a synthetic customer in the sidebar.
+2. Choose Normal transfer and click Score transaction.
+3. Choose Suspicious transfer and click Score transaction.
+4. Compare scores and signals.
+5. Try Legitimate new phone / travel. This demonstrates why unfamiliar behavior alone must not be treated as proof of fraud.
+6. Change the amount or failed PIN count and score again.
+7. Open evaluation results to discuss false positives and missed attacks.
+
+Signals are readable feature flags, not model attribution. The Random Forest score is uncalibrated and should be called a **model risk score**, not a confirmed probability of fraud. Step-up verification is a simulation only.
+
+## 8. Start your actual GitHub history now
+
+Create a public repository called AccountGuard-AI on GitHub. Keep README initialization unchecked if importing this existing folder. With GitHub Desktop: File → Add local repository → select this folder → create repository if asked. Review files, commit with an honest message such as `feat: add assisted synthetic-data ML starter`, and Publish repository with the private checkbox unchecked.
+
+Or, after creating an empty GitHub repository:
 
 ```bash
+git init
 git add .
-git commit -m "Added feature"
-git push -u origin feature-name
+git commit -m "feat: add assisted synthetic-data ML starter"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/AccountGuard-AI.git
+git push -u origin main
 ```
 
-A **Pull Request** can then be created to merge the changes into the `main` branch.
+Replace YOUR_USERNAME. If Git requests identity, set your own name and email. Use GitHub Desktop/browser authentication rather than putting a token in code. Do not invent earlier commits: this starter was generated together. Commit each real change from now on and disclose AI assistance as required.
 
-## 📅 Hackathon
+## 9. Understand the files
 
-**Event:** AI DevFest Hackathon
-**Year:** 2026
+| File | Purpose |
+|---|---|
+| src/generate_data.py | Reproducible synthetic profiles and labeled events |
+| src/core.py | Shared feature builder, scoring and signal descriptions |
+| src/train.py | Model training and user-disjoint evaluation |
+| app.py | Dashboard and editable demo event |
+| tests/smoke.py | Normal/attack scoring and invalid-balance checks |
+| requirements.txt | Python packages |
+| .gitignore | Excludes generated data, model and local environment |
 
-## 📄 License
+The synthetic generator contains legitimate unusual behavior and subtle attacks. Labels influence how synthetic events are sampled, not how feature extraction calculates values. Dataset assumptions still create bias: performance only measures this simulator, and attackers in the real world may behave very differently.
 
-This project was developed as part of the AI DevFest Hackathon.
+## 10. Next improvements for the competition
 
----
+First get this version running on each teammate's laptop. Then commit actual improvements:
 
-⭐ **Built with AI, creativity, and teamwork.**
+- Add timestamped history and calculate counts/medians from earlier events only.
+- Compare the model against a simple rule baseline on the same held-out users.
+- Add validation data for threshold selection/calibration; keep test labels untouched.
+- Add SHAP explanations if you can validate their interpretation.
+- Measure scoring latency and analyze legitimate travel/new-phone false positives.
+- Add a FastAPI endpoint only if another frontend or integration needs it.
+- Deploy a demo, record the video and prepare the report; deployment is not included here.
+
+For a report, document problem, synthetic-data assumptions, model/features, split method, metrics, simulated action, privacy limitations and future integration. Keep the presentation honest about the prototype's scope.
+
+## Troubleshooting
+
+- `No module named ...`: activate .venv and run `python -m pip install -r requirements.txt` again.
+- `can't open file`: open the terminal in the folder containing app.py.
+- Missing transactions.csv: run generation before training.
+- Missing model.joblib: run training before opening the dashboard.
+- Windows PowerShell blocks activation: switch to Command Prompt and use the Windows commands above.
+- Browser does not open: copy the Local URL from the Streamlit terminal.
+- Changing data/model files: stop the dashboard, rerun generation/training as appropriate, then restart so its cached model refreshes.
+
+Never load a joblib model from an untrusted source. There are no secrets required; never commit actual customer information or credentials.
