@@ -35,6 +35,58 @@ div.stButton > button[kind="primary"], div.stFormSubmitButton > button[kind="pri
 .risk-value {font-size:58px;font-weight:750;letter-spacing:-.06em;line-height:1.2}
 .signal {padding:10px 0;border-bottom:1px solid #edf0f5;font-size:15px}
 @media(max-width:700px){.hero{display:block}.hero h1{font-size:28px}}
+
+/* Brand layer: local fonts stay fast and work offline. */
+html,body,.stApp,input,button,[data-testid="stMarkdownContainer"] {
+ font-family:"Aptos","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+}
+h1,h2,h3,.risk-value {font-family:"Segoe UI Variable Display","Aptos Display","Segoe UI",system-ui,sans-serif;font-weight:750;letter-spacing:-.035em}
+.stApp,[data-testid="stAppViewContainer"] {background:radial-gradient(ellipse at 95% 0%,#e6f5f3 0,transparent 35%),radial-gradient(ellipse at 5% 30%,#eef0ff 0,transparent 35%),#f6f8fc}
+[data-testid="stSidebar"] {background:#152441;border-right:0}
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"],
+[data-testid="stSidebar"] h2,[data-testid="stSidebar"] p,[data-testid="stSidebar"] label {color:#f3f6ff !important}
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {color:#c6d2e9 !important}
+[data-testid="stSidebar"] [data-baseweb="select"] span {color:#16243b !important}
+[data-testid="stSidebar"] hr {border-color:#3b4d6c}
+.hero {position:relative;overflow:hidden;min-height:180px;padding:30px 32px;border-radius:24px;
+ background:linear-gradient(115deg,#192e57 0%,#294b93 60%,#166d77 100%);box-shadow:0 12px 35px #19335c15;gap:20px}
+.hero:after {content:"";position:absolute;right:48px;top:-90px;width:270px;height:270px;border:36px solid #ffffff09;border-radius:50%;pointer-events:none}
+.hero h1 {color:#fff;font-size:40px;position:relative;z-index:1}
+.hero .eyebrow {color:#acebe3}.hero p {color:#e0eafa;font-size:17px;position:relative;z-index:1;max-width:620px}
+.hero .pill {background:#ffffff18;color:#fff;border:1px solid #ffffff40;white-space:nowrap;z-index:1}
+[data-testid="stMetric"] {border:1px solid #dfe6f0;border-top:4px solid #456bed;box-shadow:0 4px 15px #15244106;transition:transform .2s ease}
+[data-testid="stMetric"]:hover {transform:translateY(-3px)}
+[data-testid="stHorizontalBlock"] > div:nth-child(2) [data-testid="stMetric"] {border-top-color:#159589}
+[data-testid="stHorizontalBlock"] > div:nth-child(3) [data-testid="stMetric"] {border-top-color:#8454cb}
+[data-testid="stHorizontalBlock"] > div:nth-child(4) [data-testid="stMetric"] {border-top-color:#d88a16}
+[data-testid="stMetricValue"] {font-size:28px;font-variant-numeric:tabular-nums}
+[data-testid="stForm"] {box-shadow:0 8px 30px #182c4b06;border-color:#dce4ef}
+div.stFormSubmitButton > button[kind="primary"] {background:linear-gradient(105deg,#315edb,#5842c7);min-height:48px;font-weight:650;box-shadow:0 4px 12px #315edb25}
+div.stFormSubmitButton > button[kind="primary"] p {color:#fff !important}
+.card {box-shadow:0 6px 24px #182c4b08;border-color:#dce4ef}
+.signal {border-bottom-color:#e2e9f2}.signal:before {content:"●";color:#586bd1;margin-right:10px;font-size:10px}
+.journey {display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 24px}
+.journey span {background:#fff;border:1px solid #dce4ef;border-radius:100px;padding:9px 15px;color:#41526d;font-size:13px;font-weight:600}
+.journey b {display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:22px;height:22px;background:#eaf0ff;color:#315edb;margin-right:7px}
+@media(max-width:700px){.hero{padding:24px}.hero h1{font-size:30px}.hero .pill{margin-top:15px;display:inline-block}}
+
+
+/* Smooth motion with a quiet local-language accent. */
+@keyframes softArrival {from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bannerArrival {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.hero {animation:bannerArrival .65s cubic-bezier(.22,1,.36,1) both}
+.card,[data-testid="stMetric"] {animation:softArrival .55s cubic-bezier(.22,1,.36,1) both}
+[data-testid="stHorizontalBlock"] > div:nth-child(2) [data-testid="stMetric"] {animation-delay:.05s}
+[data-testid="stHorizontalBlock"] > div:nth-child(3) [data-testid="stMetric"] {animation-delay:.10s}
+[data-testid="stHorizontalBlock"] > div:nth-child(4) [data-testid="stMetric"] {animation-delay:.15s}
+button,[data-testid="stMetric"] {transition:transform .28s cubic-bezier(.22,1,.36,1),box-shadow .28s ease,background-color .28s ease}
+button:active {transform:translateY(0) scale(.99)}
+.local-note {font-family:"Nirmala UI","Vrinda","Noto Sans Bengali","Segoe UI",sans-serif;font-size:14px;line-height:1.8;color:#daf3ee !important;margin-top:12px !important}
+.local-note span {display:inline-block;margin-right:8px;color:#91e5d5;font-size:17px}
+[data-testid="stSidebar"] .local-brand {font-family:"Nirmala UI","Vrinda","Noto Sans Bengali",sans-serif;color:#bfe6e4 !important;font-size:13px;line-height:1.8}
+@media(prefers-reduced-motion:reduce){.hero,.card,[data-testid="stMetric"]{animation:none !important;transform:none !important}button,[data-testid="stMetric"]{transition:none !important}}
+
 </style>''', unsafe_allow_html=True)
 if not (ROOT / 'models/model.joblib').exists():
     st.title('Welcome to AccountGuard')
@@ -49,7 +101,8 @@ def load_profiles(): return json.loads((ROOT / 'data/profiles.json').read_text()
 profiles = load_profiles()
 with st.sidebar:
     st.markdown('## 🛡️ AccountGuard')
-    st.caption('Customer security workspace')
+    st.caption('Behavior. Context. Confidence.')
+    st.markdown('<p class="local-brand">আপনার লেনদেন, আপনার নিয়ন্ত্রণ।</p>', unsafe_allow_html=True)
     page = st.radio('Workspace', ['Transaction review', 'Model performance'], label_visibility='collapsed')
     st.divider()
     uid = st.selectbox('Customer account', list(profiles), help='All accounts in this demo are synthetic.')
@@ -62,7 +115,7 @@ if st.session_state.get('active_user') != uid:
     st.session_state.active_user = uid
     st.session_state.pop('result', None)
 
-st.markdown('<div class="hero"><div><div class="eyebrow">Behavioral account protection</div><h1>Security workspace</h1><p>Review activity. Understand risk. Choose the next action.</p></div><span class="pill">SYNTHETIC DEMO</span></div>', unsafe_allow_html=True)
+st.markdown('<div class="hero"><div><div class="eyebrow">Behavioral account protection</div><h1>A little context. A smarter guard.</h1><p>Understand the behavior behind every transaction.</p><p class="local-note"><span aria-hidden="true">৳</span>লেনদেন বুঝুন, তারপর সিদ্ধান্ত নিন।</p></div><span class="pill">SYNTHETIC DEMO</span></div>', unsafe_allow_html=True)
 if page == 'Model performance':
     metrics = json.loads((ROOT / 'models/metrics.json').read_text())
     st.subheader('Model performance')
@@ -84,14 +137,17 @@ if page == 'Model performance':
     with st.expander('Technical evaluation details'): st.json(metrics)
     st.stop()
 
-st.subheader('Customer overview')
+st.markdown('<div class="journey"><span><b>1</b>Choose a customer</span><span><b>2</b>Explore activity</span><span><b>3</b>Investigate with context</span></div>', unsafe_allow_html=True)
+st.subheader('Customer at a glance')
 cols = st.columns(4)
 cols[0].metric('Account', uid)
 cols[1].metric('Usual district', p['district'])
 cols[2].metric('Typical transfer', f"৳{p['median_amount']:,}")
 cols[3].metric('Usual hours', f"{p['start_hour']:02d}:00–{p['end_hour']:02d}:59")
 
-st.markdown('### Review a transaction')
+st.markdown('### Transaction playground')
+st.caption('Explore realistic scenarios, adjust the details, and see how context changes the next step.')
+st.caption('ভ্রমণ মানেই ঝুঁকি নয় — আগে প্রেক্ষাপট যাচাই করুন।')
 scenario = st.radio('Load a demo scenario', ['Everyday payment', 'Possible account takeover', 'New phone & travel'], horizontal=True,
     help='Scenarios prefill the form. You can edit any value before analysis.')
 suspicious = scenario == 'Possible account takeover'
