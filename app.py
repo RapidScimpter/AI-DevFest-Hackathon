@@ -3,10 +3,24 @@ import json
 import joblib
 import streamlit as st
 from src.core import ROOT, score
+from src.review import investigate
 
 st.set_page_config(page_title='AccountGuard | Security workspace', page_icon='🛡️', layout='wide')
 st.markdown('''<style>
-.stApp {background:#f5f7fb;color:#16243b}
+.stApp {background:#f5f7fb;color:#16243b;color-scheme:light}
+[data-testid="stAppViewContainer"], [data-testid="stHeader"] {background:#f5f7fb}
+[data-testid="stMarkdownContainer"], [data-testid="stWidgetLabel"], [data-testid="stMetricLabel"], [data-testid="stMetricValue"], h1,h2,h3,p,label {color:#16243b}
+[data-testid="stCaptionContainer"] p {color:#465873 !important}
+input {background:#fff !important;color:#16243b !important;-webkit-text-fill-color:#16243b !important}
+[data-baseweb="input"], [data-baseweb="base-input"], [data-baseweb="select"] > div {background:#fff !important;color:#16243b !important;border-color:#8191a8 !important}
+[data-testid="stExpander"] {background:#fff;color:#16243b;border-color:#b8c4d5}
+[data-testid="stExpander"] summary {color:#16243b !important}
+[data-testid="stAlert"] {color:#16243b}
+button {transition:transform .18s ease,box-shadow .18s ease}
+button:hover {transform:translateY(-1px);box-shadow:0 4px 12px #16243b15}
+@keyframes reveal {from {opacity:0;transform:translateY(8px)} to {opacity:1;transform:translateY(0)}}
+.card,.hero,[data-testid="stMetric"] {animation:reveal .4s ease both}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
 .block-container {max-width:1250px;padding-top:2rem;padding-bottom:3rem}
 h1,h2,h3 {letter-spacing:-.04em}
 [data-testid="stSidebar"] {background:#fff;border-right:1px solid #e3e8f0}
@@ -90,7 +104,8 @@ if st.session_state.get('form_signature') != form_signature:
         'device':'NEW_DEVICE' if changed else p['known_devices'][0],
         'recipient':'NEW_RECIPIENT' if suspicious else p['known_recipients'][0],
         'district':'Other' if changed else p['district'], 'hour':2 if suspicious else 14,
-        'count':4 if suspicious else 0, 'failed':3 if suspicious else 0}
+        'count':4 if suspicious else 0, 'failed':3 if suspicious else 0,
+        'travel_verified': scenario == 'New phone & travel', 'device_verified': scenario == 'New phone & travel'}
     for key, value in defaults.items(): st.session_state['input_' + key] = value
 if scenario == 'New phone & travel':
     st.info('Legitimate customers can change devices and travel. Unfamiliar activity is a signal to review, not proof of fraud.')
@@ -106,6 +121,10 @@ with st.form('transaction'):
         hour = d.number_input('Transaction hour (24-hour clock)', 0, 23, key='input_hour')
         count = c.number_input('Earlier transactions in the last 10 minutes', 0, 100, key='input_count')
         failed = d.number_input('Recent failed PIN attempts', 0, 20, key='input_failed')
+    st.markdown('**Investigation context · simulated checks**')
+    st.caption('A travel claim is an explanation, not proof. Mark these only to simulate a trusted-channel verification. Verified travel never clears other concerning evidence.')
+    travel_verified = st.checkbox('Travel confirmed through a trusted channel (demo)', key='input_travel_verified')
+    device_verified = st.checkbox('Device change confirmed through a trusted channel (demo)', key='input_device_verified')
     submitted = st.form_submit_button('Analyze transaction →', type='primary', use_container_width=True)
 if submitted:
     st.session_state.pop('result', None)
@@ -113,25 +132,34 @@ if submitted:
         if not all(str(v).strip() for v in [device, recipient, district]): raise ValueError('Enter a device ID, recipient ID and district.')
         event = {'amount':amount, 'balance_before':balance, 'device_id':device.strip(), 'recipient_id':recipient.strip(),
             'district':district.strip(), 'hour':hour, 'transactions_10min':count, 'failed_pin_attempts':failed}
-        st.session_state.result = {'analysis':score(load_model(), event, p), 'event':event}
+        with st.spinner('Comparing behavior and checking investigation context…'):
+            analysis = score(load_model(), event, p)
+            review = investigate(analysis['features'], {'travel_verified':travel_verified, 'device_verified':device_verified})
+            st.session_state.result = {'analysis':analysis, 'event':event, 'review':review}
     except ValueError as exc: st.error(str(exc))
 if 'result' in st.session_state:
     saved = st.session_state.result
     r = saved['analysis']
     st.markdown('### Analysis result')
     st.caption('Result for the last analyzed transaction. Submit again after editing the form.')
-    color = {'High':'#bf3544', 'Medium':'#ab6707', 'Low':'#17845b'}[r['band']]
+    review = saved['review']
+    color = '#946000' if review['follow_up'] else '#15724f'
     a, b = st.columns([1, 2])
     with a:
-        st.markdown(f'<div class="card"><div class="eyebrow">Model risk score</div><div class="risk-value" style="color:{color}">{r["score"]:.1f}<span style="font-size:20px;color:#60718a"> / 100</span></div><p style="color:{color};font-weight:700">{r["band"]} risk</p></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="card"><div class="eyebrow">Raw model signal</div><div class="risk-value" style="color:{color}">{r["score"]:.1f}<span style="font-size:20px;color:#60718a"> / 100</span></div><p style="color:{color};font-weight:700">Requires context · not a verdict</p></div>', unsafe_allow_html=True)
         st.progress(min(1.0, r['score']/100))
     with b:
-        title = 'Request additional verification' if r['band'] != 'Low' else 'Continue with normal checks'
+        title = review['status']
         st.markdown(f'<div class="card"><div class="eyebrow">Suggested next action</div><h3>{title}</h3><p>৳{saved["event"]["amount"]:,.2f} → {html.escape(saved["event"]["recipient_id"])}</p></div>', unsafe_allow_html=True)
-        if r['band'] != 'Low': st.warning('Demo recommendation: verify the customer before proceeding. No OTP is sent and no account is blocked.')
-        else: st.success('No elevated risk at the demo review threshold. Continue existing security checks.')
+        st.write('Next step:', review['action'])
+        if review['follow_up']:
+            st.warning('Investigation pending. Unusual behavior alone does not establish fraud.')
+            for item in review['follow_up']: st.write('• ' + item)
+        else: st.success('No unresolved signals under the demo investigation policy.')
+        for explanation in review['explanations']: st.info(explanation)
+        st.caption('No transaction is approved, blocked, or labeled as confirmed fraud by this demo.')
     with st.container(border=True):
-        st.markdown('**Observed behavioral signals**')
+        st.markdown('**Observed behavior — evidence to interpret**')
         for reason in r['signals']: st.markdown(f'<div class="signal">{html.escape(reason)}</div>', unsafe_allow_html=True)
         st.caption('These signals describe the input features; they are not SHAP attributions or causal explanations.')
     with st.expander('Inspect the analyzed transaction and model input'):

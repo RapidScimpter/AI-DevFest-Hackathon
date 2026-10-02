@@ -67,10 +67,10 @@ python -m streamlit run app.py
 Open the Local URL printed in the terminal, usually http://localhost:8501 . Leave the terminal running. Press Ctrl+C to stop it.
 
 1. Select a synthetic customer in the sidebar.
-2. Choose Normal transfer and click Score transaction.
-3. Choose Suspicious transfer and click Score transaction.
+2. Choose Everyday payment and click Analyze transaction.
+3. Choose Possible account takeover and click Analyze transaction.
 4. Compare scores and signals.
-5. Try Legitimate new phone / travel. This demonstrates why unfamiliar behavior alone must not be treated as proof of fraud.
+5. Try New phone & travel. This demonstrates why unfamiliar behavior alone must not be treated as proof of fraud.
 6. Change the amount or failed PIN count and score again.
 7. Open evaluation results to discuss false positives and missed attacks.
 
@@ -132,3 +132,11 @@ For a report, document problem, synthetic-data assumptions, model/features, spli
 - Changing data/model files: stop the dashboard, rerun generation/training as appropriate, then restart so its cached model refreshes.
 
 Never load a joblib model from an untrusted source. There are no secrets required; never commit actual customer information or credentials.
+
+## Investigation interface update
+
+To update an existing installation, copy app.py, src/review.py and .streamlit/config.toml into matching locations. Stop and restart Streamlit. No retraining is needed.
+
+The raw model score is unchanged. A separate, explicit demo policy considers simulated trusted-channel travel/device verification. Unexplained novelty asks for context; corroborating concerns ask for further investigation. Verified travel alone never overrides rapid transfers, repeated PIN failures or a large transfer to a new recipient. No event receives a confirmed-fraud verdict. This policy has not been evaluated by the model metrics. Checkboxes simulate verification, not actual identity checks.
+
+Light theme, higher contrast, entrance/hover animation and reduced-motion support improve readability. If your browser retained dark mode, select Light in Streamlit Settings.
