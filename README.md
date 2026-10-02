@@ -1,142 +1,87 @@
-# AccountGuard AI — beginner setup guide
+# AccountGuard AI
 
-A runnable ML prototype for detecting possible account takeover in mobile financial services. It generates synthetic events, trains a Random Forest, and presents transaction scoring in Streamlit. No real customers, financial transactions, OTPs, or upay integration are involved.
+Behavioral transaction review with context, synthetic history, investigation cases and call/text screening. Independent hackathon prototype; no upay connection or real transaction processing.
 
-## 1. Install the tools
+## Upgrade an existing project
 
-Install Python 3.11 or 3.12 from https://www.python.org/downloads/ . On Windows, select **Add Python to PATH** during installation. Install VS Code from https://code.visualstudio.com/ . Install Git from https://git-scm.com/downloads/ if using terminal Git, or use GitHub Desktop.
+Stop Streamlit with Ctrl+C. Extract the latest ZIP separately. Copy app.py, requirements.txt, README.md, the entire src and tests folders, and .streamlit into your existing project. Keep your existing .venv and .git directories. Do not overwrite a Git repository with a fresh repository.
 
-## 2. Extract and open this project
+In your project terminal run, one command at a time:
 
-Extract AccountGuard-AI.zip. Open the extracted **AccountGuard-AI** folder in VS Code using File → Open Folder. Choose Terminal → New Terminal. The terminal must be inside the folder containing requirements.txt and app.py. Do not type the Markdown backticks around commands.
+```powershell
+python -m pip install -r requirements.txt
+python src/generate_data.py
+python src/train.py
+python tests/smoke.py
+python -m streamlit run app.py
+```
 
-## 3. Create a Python environment
+This version requires regeneration and retraining. It replaces generated synthetic data and the model; export any session cases/logs first. No external APIs or keys are required. Open http://localhost:8501 if the browser does not open.
 
-Windows Command Prompt (in VS Code choose the terminal dropdown → Command Prompt):
+## First-time setup on Windows
+
+Install Python 3.11 or 3.12 with Add Python to PATH. Extract the ZIP and open the inner AccountGuard-AI folder in VS Code. Open a Command Prompt terminal:
 
 ```bat
 py -3 -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install -r requirements.txt
-```
-
-If `py` is unavailable, try `python -m venv .venv` for the first command.
-
-macOS/Linux:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-The environment keeps this project's packages together. Internet access is needed to install packages; the demo needs no external API key.
-
-## 4. Generate the data
-
-```bash
 python src/generate_data.py
-```
-
-Expected: `Created 24000 events and 600 synthetic profiles.` This creates data/transactions.csv and data/profiles.json. Do not edit the label to influence a prediction. The label is used only for training and evaluation.
-
-## 5. Train and evaluate
-
-```bash
 python src/train.py
-```
-
-This creates models/model.joblib and models/metrics.json. It prints precision, recall, F1, average precision (PR-AUC summary), false-positive rate and confusion matrix. The confusion matrix has rows actual normal/attack and columns predicted normal/attack. The model uses a fixed 0.40 review threshold; high risk starts at 0.70.
-
-Different users are held out for testing. User IDs, transaction IDs and labels are never model inputs. Trusted profiles stand in for an earlier enrollment/history period; this first version does not compute rolling history from timestamps.
-
-## 6. Run a basic check
-
-```bash
 python tests/smoke.py
-```
-
-Expected: `Smoke checks passed` and two scores. A conspicuous attack should score above a normal transfer, and amounts above balance should be rejected.
-
-## 7. Open the dashboard
-
-```bash
 python -m streamlit run app.py
 ```
 
-Open the Local URL printed in the terminal, usually http://localhost:8501 . Leave the terminal running. Press Ctrl+C to stop it.
+On macOS/Linux use python3 -m venv .venv and source .venv/bin/activate, then the same Python commands.
 
-1. Select a synthetic customer in the sidebar.
-2. Choose Everyday payment and click Analyze transaction.
-3. Choose Possible account takeover and click Analyze transaction.
-4. Compare scores and signals.
-5. Try New phone & travel. This demonstrates why unfamiliar behavior alone must not be treated as proof of fraud.
-6. Change the amount or failed PIN count and score again.
-7. Open evaluation results to discuss false positives and missed attacks.
+## Use the dashboard
 
-Signals are readable feature flags, not model attribution. The Random Forest score is uncalibrated and should be called a **model risk score**, not a confirmed probability of fraud. Step-up verification is a simulation only.
+1. Transaction review: choose a customer and expand recent history. Select an example and edit amount, recipient, device, district or date/time. Click Analyze transaction.
+2. The system calculates the baseline and recent transfer count from earlier events. The takeover demo injects three explicitly simulated earlier transfers at minus 8, 5 and 2 minutes.
+3. Investigation cases: open the generated case, choose a simulated customer response and click Record simulated response. Travel/device confirmation explains novelty but does not override other concerning evidence.
+4. Select a reviewer outcome, add notes and save. Unreachable customers keep cases pending. Reported unauthorized activity requires a recorded denial; contradictory legitimate outcomes are rejected.
+5. Activity log: view and download the session investigation trail. Cases and logs are browser-session state, not durable storage. Refreshing or restarting can lose them.
+6. Model performance: inspect held-out synthetic-user metrics and a basic-rule comparison.
+7. Call & text check: enter a number and optional text. Number format and selected English/Bengali warning phrases are screened. Locally submitted reports are shown as unverified evidence; caller identity is not verified. Numbers with no reports remain unverified.
 
-## 8. Start your actual GitHub history now
+## What changed in the ML pipeline
 
-Create a public repository called AccountGuard-AI on GitHub. Keep README initialization unchecked if importing this existing folder. With GitHub Desktop: File → Add local repository → select this folder → create repository if asked. Review files, commit with an honest message such as `feat: add assisted synthetic-data ML starter`, and Publish repository with the private checkbox unchecked.
+The generator creates 200 customers with 90 events each. First 20 events per customer are warm-up history and excluded from model fitting/evaluation. Each later event is featurized using only same-customer events with strictly earlier timestamps. Amount median, common district, known devices/recipients and usual-hour range use the last 50 earlier events. Previous-ten-minute count uses earlier event timestamps. Attack labels and future events are never profile inputs.
 
-Or, after creating an empty GitHub repository:
+Profiles include all previous observations, which can include suspicious transactions; real systems would need trusted-profile update controls against poisoning. Known-recipient membership is not equivalent to safety. Failed PIN count is a supplied session observation in this demo, not retrieved from authentication telemetry. Historical balances are simulated independently, not a reconciled financial ledger.
 
-```bash
-git init
-git add .
-git commit -m "feat: add assisted synthetic-data ML starter"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/AccountGuard-AI.git
-git push -u origin main
-```
+Random Forest evaluation holds out customers, uses a fixed 0.40 review threshold and reports precision, recall, F1, average precision and false-positive rate. A basic rule (new device AND amount above 3 times median) is evaluated on identical held-out events. Synthetic behavior overlaps between classes; these metrics do not establish production performance. Scores remain uncalibrated.
 
-Replace YOUR_USERNAME. If Git requests identity, set your own name and email. Use GitHub Desktop/browser authentication rather than putting a token in code. Do not invent earlier commits: this starter was generated together. Commit each real change from now on and disclose AI assistance as required.
+The separate investigation policy is a transparent demo rule layer, not a second trained model. Readable signals are feature flags, not SHAP contributions. Simulated customer confirmation is not real verification. The reviewer outcome is not independently confirmed fraud. No OTP is sent, account blocked or payment approved.
 
-## 9. Understand the files
+## Files
 
 | File | Purpose |
 |---|---|
-| src/generate_data.py | Reproducible synthetic profiles and labeled events |
-| src/core.py | Shared feature builder, scoring and signal descriptions |
-| src/train.py | Model training and user-disjoint evaluation |
-| app.py | Dashboard and editable demo event |
-| tests/smoke.py | Normal/attack scoring and invalid-balance checks |
-| requirements.txt | Python packages |
-| .gitignore | Excludes generated data, model and local environment |
+| src/history.py | Strictly prior-history profile and counts |
+| src/generate_data.py | Timestamped synthetic event generation |
+| src/core.py | Feature definitions and ML scoring |
+| src/train.py | User-disjoint evaluation and rule comparison |
+| src/review.py | Context-aware investigation policy |
+| src/contact_check.py | Number formatting and message phrase screening |
+| app.py | Dashboard, case workflow and session log |
+| tests/smoke.py | Future/label isolation, counts and verification checks |
+| .streamlit/config.toml | Readable light theme |
 
-The synthetic generator contains legitimate unusual behavior and subtle attacks. Labels influence how synthetic events are sampled, not how feature extraction calculates values. Dataset assumptions still create bias: performance only measures this simulator, and attackers in the real world may behave very differently.
+## GitHub and submission
 
-## 10. Next improvements for the competition
+Commit actual work as it happens. Do not manufacture earlier history. The starter and updates were AI-assisted; disclose assistance as required and ensure teammates understand the implementation. Generated data/models and .venv are ignored; reviewers recreate them with the commands above. Do not publish real customer details, credentials or secrets.
 
-First get this version running on each teammate's laptop. Then commit actual improvements:
-
-- Add timestamped history and calculate counts/medians from earlier events only.
-- Compare the model against a simple rule baseline on the same held-out users.
-- Add validation data for threshold selection/calibration; keep test labels untouched.
-- Add SHAP explanations if you can validate their interpretation.
-- Measure scoring latency and analyze legitimate travel/new-phone false positives.
-- Add a FastAPI endpoint only if another frontend or integration needs it.
-- Deploy a demo, record the video and prepare the report; deployment is not included here.
-
-For a report, document problem, synthetic-data assumptions, model/features, split method, metrics, simulated action, privacy limitations and future integration. Keep the presentation honest about the prototype's scope.
+For the report/video include the problem, synthetic-data assumptions, strictly prior features, split method, baseline comparison, verification limitations and one legitimate travel case alongside a suspicious case. Deployment and production integrations are not included.
 
 ## Troubleshooting
 
-- `No module named ...`: activate .venv and run `python -m pip install -r requirements.txt` again.
-- `can't open file`: open the terminal in the folder containing app.py.
-- Missing transactions.csv: run generation before training.
-- Missing model.joblib: run training before opening the dashboard.
-- Windows PowerShell blocks activation: switch to Command Prompt and use the Windows commands above.
-- Browser does not open: copy the Local URL from the Streamlit terminal.
-- Changing data/model files: stop the dashboard, rerun generation/training as appropriate, then restart so its cached model refreshes.
+Missing module: install requirements with the same python interpreter you run. Missing timestamps: regenerate data and retrain. After changing generated data/models, restart Streamlit to clear caches. A transaction too early in history is rejected because it has fewer than 10 prior events. PowerShell activation issues: use Command Prompt. Never load joblib models from untrusted sources.
 
-Never load a joblib model from an untrusted source. There are no secrets required; never commit actual customer information or credentials.
+## Persistent call/text reports
 
-## Investigation interface update
+Copy updated app.py, src/contact_check.py and the new src/reports.py into an existing installation. No regeneration or retraining is needed for this update.
 
-To update an existing installation, copy app.py, src/review.py and .streamlit/config.toml into matching locations. Stop and restart Streamlit. No retraining is needed.
+Report call / text stores a normalized number, category, channel, sanitized user-provided evidence and UTC timestamp in data/contact_reports.sqlite3. Call & text check reads number reports and exact text-message matches (case/whitespace normalized, minimum 20 characters). Identical number/channel/category/text submissions are deduplicated. Reports are unverified allegations, not independent-victim counts or confirmed fraud. No lookup query is stored and no ML retraining occurs.
 
-The raw model score is unchanged. A separate, explicit demo policy considers simulated trusted-channel travel/device verification. Unexplained novelty asks for context; corroborating concerns ask for further investigation. Verified travel alone never overrides rapid transfers, repeated PIN failures or a large transfer to a new recipient. No event receives a confirmed-fraud verdict. This policy has not been evaluated by the model metrics. Checkboxes simulate verification, not actual identity checks.
-
-Light theme, higher contrast, entrance/hover animation and reduced-motion support improve readability. If your browser retained dark mode, select Light in Streamlit Settings.
+The database survives restarts on the same computer. Keep it private and out of Git. Back it up only to a trusted location; deleting this database deletes the local reports. Separate installations do not synchronize. Deploying for public use requires authentication, moderation, abuse controls and appropriate data handling; this version is a local prototype.

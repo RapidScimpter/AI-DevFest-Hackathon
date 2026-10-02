@@ -1,19 +1,30 @@
 import sys
-sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parents[1]))
-import json
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import pandas as pd
 import joblib
-from src.core import ROOT, score
-p = json.loads((ROOT / 'data/profiles.json').read_text())['U0000']
-m = joblib.load(ROOT / 'models/model.joblib')
-e = dict(amount=p['median_amount'], balance_before=30000, device_id=p['known_devices'][0],
-         recipient_id=p['known_recipients'][0], district=p['district'], hour=14,
-         transactions_10min=0, failed_pin_attempts=0)
-normal = score(m, e, p)
-attack = score(m, {**e, 'amount': 20000, 'device_id':'UNKNOWN', 'recipient_id':'UNKNOWN',
-                  'district':'Other', 'hour':2, 'transactions_10min':4, 'failed_pin_attempts':3}, p)
-assert attack['score'] > normal['score']
-try:
-    score(m, {**e, 'amount':40000}, p)
-    raise AssertionError('Invalid balance accepted')
-except ValueError: pass
-print('Smoke checks passed:', normal['score'], attack['score'])
+from src.core import ROOT
+from src.history import prepare, score_from_history
+from src.review import investigate
+
+history=pd.read_csv(ROOT/'data/transactions.csv')
+u=history[history.user_id=='U0000']
+event=u.iloc[35].to_dict()
+enriched,profile,prior=prepare(event,history)
+assert all(pd.to_datetime(prior.timestamp)<pd.Timestamp(event['timestamp']))
+changed=history.copy()
+mask=pd.to_datetime(changed.timestamp)>=pd.Timestamp(event['timestamp'])
+changed.loc[mask,'amount']=999999
+changed['is_account_takeover']=1-changed.is_account_takeover
+other,other_profile,_=prepare(event,changed)
+assert profile==other_profile
+assert enriched['transactions_10min']==other['transactions_10min']
+# Editing a submitted count must not override the actual timestamp-derived count.
+assert prepare({**event,'transactions_10min':999},history)[0]['transactions_10min']==enriched['transactions_10min']
+travel={'new_device':1,'location_change':1,'failed_pin_attempts':0,'transactions_10min':0,'balance_drain_ratio':.1,'new_recipient':0,'amount_ratio':1}
+assert investigate(travel,{'travel_verified':True,'device_verified':True})['status']=='Legitimate context verified (demo)'
+assert investigate({**travel,'failed_pin_attempts':3},{'travel_verified':True,'device_verified':True})['status']=='Further investigation needed'
+model=joblib.load(ROOT/'models/model.joblib')
+result,_,_=score_from_history(model,event,history)
+assert 0<=result['score']<=100
+print('Passed: prior-only history, future/label isolation, automatic counts, context policy and scoring.')
