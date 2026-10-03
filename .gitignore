@@ -9,3 +9,6 @@ models/metrics.json
 
 data/*.sqlite3
 data/*.sqlite3-*
+
+data/wallet.sqlite3
+data/wallet.sqlite3-*

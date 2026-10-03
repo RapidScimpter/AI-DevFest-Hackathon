@@ -13,4 +13,4 @@ def screen_contact(number, message=''):
     signals = [description for pattern, description in patterns if re.search(pattern, message.casefold())]
     reports = lookup_reports(normalized, message)
     reported = bool(reports['number_reports'] or reports['matching_text_reports'])
-    return {'number':normalized, 'status':'Community reports found — unverified' if reported else ('Warning signs found — investigate' if signals else 'Unverified — insufficient evidence'), 'signals':signals, **reports}
+    return {'number':normalized, 'status':('Repeated reports — elevated concern (unverified)' if len(reports['number_reports'])>=2 else 'Community report found — use caution (unverified)') if reported else ('Warning signs found — investigate' if signals else 'Unverified — insufficient evidence'), 'signals':signals, **reports}
