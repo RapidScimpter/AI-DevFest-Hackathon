@@ -167,3 +167,11 @@ def test_staff_pages_load(analyst):
     for path in ('/api/analyst/model', '/api/analyst/drift', '/api/analyst/customers', '/api/analyst/reports'):
         assert analyst.get(path).status_code == 200, path
     assert len(analyst.get('/api/analyst/customers').json()) >= 6
+
+
+def test_public_login_shortcuts_do_not_expose_credentials():
+    from fastapi.testclient import TestClient
+    from app.main import app
+    response = TestClient(app).get('/api/auth/demo')
+    assert response.status_code == 200
+    assert response.json() == []

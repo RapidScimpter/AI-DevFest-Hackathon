@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { api, duration, pct, taka, when } from './api.js'
 import Meter from './Meter.jsx'
-import { useCountUp } from './ui.jsx'
+import { Icon, useCountUp } from './ui.jsx'
 
 const PAGES = [['overview', 'Overview'], ['queue', 'Review queue'], ['model', 'Model quality'], ['drift', 'Changing scam methods'], ['audit', 'Audit log'], ['customers', 'Customers']]
 const LABEL = (s) => s.replaceAll('_', ' ')
@@ -34,7 +34,7 @@ export default function Analyst({ user, onSignOut }) {
     <div className="desk">
       <aside>
         <div className="who"><img src="/logo.jpg" alt="" /><div><strong>সুরক্ষা Wallet</strong><span>{user.name}, {user.role}</span></div></div>
-        <nav aria-label="Sections">{PAGES.map(([id, label]) => <button key={id} className={page === id ? 'on' : ''} onClick={() => setPage(id)}>{label}{id === 'queue' && waiting > 0 && <b className="badge">{waiting}</b>}</button>)}</nav>
+        <nav aria-label="Sections">{PAGES.map(([id, label]) => <button key={id} className={page === id ? 'on' : ''} onClick={() => setPage(id)}><Icon name={id === "queue" ? "held" : id === "audit" ? "lock" : "safe"} size={19}/>{label}{id === 'queue' && waiting > 0 && <b className="badge">{waiting}</b>}</button>)}</nav>
         <button className="ghost" onClick={onSignOut}>Sign out</button>
       </aside>
       <main key={page}><View onChange={() => api('/analyst/overview').then((o) => setWaiting(o.queue.waiting)).catch(() => {})} /></main>

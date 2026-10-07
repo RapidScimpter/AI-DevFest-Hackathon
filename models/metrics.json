@@ -1,0 +1,235 @@
+{
+  "model": "LightGBM gradient boosting + isotonic calibration",
+  "events": {
+    "train": 313378,
+    "calibration": 76586,
+    "test": 132462,
+    "test_fraud": 1260,
+    "customers": 3000
+  },
+  "average_precision": 0.900235878241437,
+  "roc_auc": 0.9969616189793855,
+  "calibration": {
+    "brier_uncalibrated": 0.0019908148939357024,
+    "brier_calibrated": 0.0019998303426284328,
+    "ece_uncalibrated": 0.0004907830228185659,
+    "ece_calibrated": 0.00026927779330778064,
+    "reliability": [
+      {
+        "bin": "0.0-0.1",
+        "events": 130908,
+        "mean_predicted": 0.0010465046617057024,
+        "observed_fraud_rate": 0.0011305649769303633
+      },
+      {
+        "bin": "0.1-0.2",
+        "events": 249,
+        "mean_predicted": 0.1512949079195605,
+        "observed_fraud_rate": 0.13253012048192772
+      },
+      {
+        "bin": "0.2-0.3",
+        "events": 158,
+        "mean_predicted": 0.23936272713028392,
+        "observed_fraud_rate": 0.25316455696202533
+      },
+      {
+        "bin": "0.3-0.4",
+        "events": 9,
+        "mean_predicted": 0.3401663480725773,
+        "observed_fraud_rate": 0.3333333333333333
+      },
+      {
+        "bin": "0.4-0.5",
+        "events": 83,
+        "mean_predicted": 0.40733995477463003,
+        "observed_fraud_rate": 0.39759036144578314
+      },
+      {
+        "bin": "0.5-0.6",
+        "events": 2,
+        "mean_predicted": 0.5464718096963721,
+        "observed_fraud_rate": 0.0
+      },
+      {
+        "bin": "0.6-0.7",
+        "events": 46,
+        "mean_predicted": 0.630365333766237,
+        "observed_fraud_rate": 0.6521739130434783
+      },
+      {
+        "bin": "0.7-0.8",
+        "events": 40,
+        "mean_predicted": 0.7483421128834877,
+        "observed_fraud_rate": 0.75
+      },
+      {
+        "bin": "0.8-0.9",
+        "events": 48,
+        "mean_predicted": 0.8880010231461762,
+        "observed_fraud_rate": 0.7708333333333334
+      },
+      {
+        "bin": "0.9-1.0",
+        "events": 919,
+        "mean_predicted": 0.9958156364369416,
+        "observed_fraud_rate": 0.985854189336235
+      }
+    ],
+    "base_rate": 0.009512161978529691
+  },
+  "review": {
+    "threshold": 0.3,
+    "precision": 0.9058413251961639,
+    "recall": 0.8246031746031746,
+    "false_positive_rate": 0.0008231581835642749,
+    "confusion_matrix": [
+      [
+        131094,
+        108
+      ],
+      [
+        221,
+        1039
+      ]
+    ]
+  },
+  "high": {
+    "threshold": 0.7,
+    "precision": 0.9662363455809335,
+    "recall": 0.7722222222222223,
+    "false_positive_rate": 0.00025914239112208656,
+    "confusion_matrix": [
+      [
+        131168,
+        34
+      ],
+      [
+        287,
+        973
+      ]
+    ]
+  },
+  "recall_by_attack": {
+    "account_takeover": {
+      "events": 187,
+      "recall": 1.0
+    },
+    "mule_smurfing": {
+      "events": 500,
+      "recall": 0.826
+    },
+    "rapid_burst": {
+      "events": 351,
+      "recall": 0.8632478632478633
+    },
+    "sim_swap": {
+      "events": 96,
+      "recall": 1.0
+    },
+    "social_engineering": {
+      "events": 126,
+      "recall": 0.31746031746031744
+    }
+  },
+  "false_positive_rate_by_segment": {
+    "freelancer": 0.0012021638950110197,
+    "merchant": 0.0010768749782888109,
+    "remittance": 0.0,
+    "salaried": 0.0005212405525149857,
+    "senior": 0.0,
+    "student": 0.000645682001614205
+  },
+  "feature_importance": {
+    "small_run": 0.2555,
+    "new_recipients_60min": 0.1562,
+    "device_age": 0.1273,
+    "gap_ratio": 0.1022,
+    "balance_drain_ratio": 0.0605,
+    "new_recipient": 0.0424,
+    "seq_nll": 0.0394,
+    "log_amount_z": 0.0339,
+    "amount_trend": 0.0272,
+    "recipient_count": 0.0267,
+    "amount_60min_ratio": 0.0224,
+    "amount_ratio": 0.0222,
+    "transactions_10min": 0.0214,
+    "is_cash_out": 0.0167,
+    "new_device": 0.0133,
+    "hour_rarity": 0.013,
+    "transactions_60min": 0.0106,
+    "transactions_1min": 0.003,
+    "failed_pin_attempts": 0.0025,
+    "recent_failed_pins": 0.0019,
+    "location_change": 0.0017,
+    "unusual_hour": 0.0001
+  },
+  "note": "Synthetic customers only; train, calibration and test customers are disjoint. Not production accuracy.",
+  "baselines": {
+    "random_forest": {
+      "average_precision": 0.8601767545475291,
+      "brier": 0.0029295010763693706,
+      "threshold": 0.3,
+      "precision": 0.9187866927592955,
+      "recall": 0.7452380952380953,
+      "false_positive_rate": 0.0006326123077392113,
+      "confusion_matrix": [
+        [
+          131119,
+          83
+        ],
+        [
+          321,
+          939
+        ]
+      ]
+    },
+    "rule": {
+      "rule": "New device AND amount above 3 times prior median",
+      "threshold": 0.5,
+      "precision": 0.5279187817258884,
+      "recall": 0.08253968253968254,
+      "false_positive_rate": 0.0007088306580692367,
+      "confusion_matrix": [
+        [
+          131109,
+          93
+        ],
+        [
+          1156,
+          104
+        ]
+      ]
+    }
+  },
+  "sequence_ablation": {
+    "average_precision_without_seq_nll": 0.9075499750663499,
+    "average_precision_with_seq_nll": 0.9104647395346345
+  },
+  "attack_pattern_model": {
+    "accuracy": 0.9404761904761905,
+    "classes": [
+      "account_takeover",
+      "mule_smurfing",
+      "rapid_burst",
+      "sim_swap",
+      "social_engineering"
+    ]
+  },
+  "drift_simulation": {
+    "scenario": "Unseen \"low and slow\" pattern: tiny probe payments age a new device and recipient, then spaced mid-size transfers.",
+    "events": 1213,
+    "recall_known_patterns": 0.8246031746031746,
+    "recall_unseen_pattern": 0.051112943116240726,
+    "mean_feature_psi_known": 0.007276157947432341,
+    "mean_feature_psi_unseen": 1.391838306957884,
+    "top_shifted_features": {
+      "new_recipients_60min": 7.47920771523605,
+      "amount_60min_ratio": 3.277550985141007,
+      "transactions_10min": 3.0967415080048974,
+      "device_age": 2.888288050993009,
+      "small_run": 2.073875779398377,
+      "transactions_60min": 1.9945592424396412
+    }
+  }
+}

@@ -12,9 +12,9 @@ from .security import hash_secret
 from .services.wallet import local_now
 
 CUSTOMER_PASSWORD, CUSTOMER_PIN = 'Demo#2026', '2468'
-STAFF = [('analyst', 'Demo Analyst', 'analyst', 'Analyst#2026'), ('admin', 'Demo Admin', 'admin', 'Admin#2026!')]
-NAMES = {'student': 'Tanvir (student)', 'salaried': 'Nusrat (salaried)', 'merchant': 'Karim Store (merchant)',
-         'remittance': 'Rahima (remittance family)', 'freelancer': 'Arif (freelancer)', 'senior': 'Abdul (senior)'}
+STAFF = [('analyst', 'Review analyst', 'analyst', 'Analyst#2026'), ('admin', 'Wallet administrator', 'admin', 'Admin#2026!')]
+NAMES = {'student': 'Tanvir', 'salaried': 'Nusrat', 'merchant': 'Karim Store',
+         'remittance': 'Rahima', 'freelancer': 'Arif', 'senior': 'Abdul'}
 BALANCE = {'student': 20_000, 'salaried': 80_000, 'merchant': 300_000, 'remittance': 120_000, 'freelancer': 150_000, 'senior': 60_000}
 SAMPLE_REPORTS = [('00000000001', 'Call', 'Impersonation', 'Caller claimed to be wallet support and asked for my OTP.'),
                   ('00000000002', 'Call', 'Suspected scam / fraud', 'Caller said my account was blocked and asked me to send money.'),

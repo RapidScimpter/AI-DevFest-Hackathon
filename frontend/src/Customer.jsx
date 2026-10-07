@@ -3,7 +3,7 @@ import { api, locate, setShareDevice, taka, when } from './api.js'
 import Meter from './Meter.jsx'
 import { Busy, Icon, Steps, useCountUp } from './ui.jsx'
 
-const TABS = [['home', 'Wallet'], ['check', 'Is this a scam?'], ['privacy', 'Permissions']]
+const TABS = [['home', 'My wallet', 'wallet', 'আমার ওয়ালেট'], ['check', 'Check a contact', 'phone', 'নম্বর যাচাই'], ['privacy', 'Privacy choices', 'lock', 'গোপনীয়তা']]
 const CONSENT_TEXT = {
   device: 'Lets the wallet recognise this phone or browser, so a sign-in from an unknown device can be questioned.',
   location: 'Shares your rough area (division only) when you send money, so a transfer from an unusual place can be questioned.',
@@ -31,18 +31,18 @@ export default function Customer({ user, onSignOut }) {
   return (
     <div className="phone">
       <header className="wallet-head">
-        <div className="who"><img src="/logo.jpg" alt="" /><div><strong>{user.name}</strong><span>{user.login}</span></div>
-          <button className="ghost" onClick={onSignOut}>Sign out</button></div>
-        <p className="balance-label">Money you can use</p>
+        <div className="who"><img src="/logo.jpg" alt="" /><div><strong>{user.name}</strong><span lang="bn">স্বাগতম · {user.login}</span></div>
+          <button className="ghost" onClick={onSignOut} aria-label="Sign out"><Icon name="logout" size={19}/><span>Sign out</span></button></div>
+        <p className="balance-label">Available balance · ব্যবহারযোগ্য ব্যালেন্স</p>
         <p className="balance" aria-live="polite">{wallet ? taka(Math.round(shown)) : '…'}</p>
         {wallet?.summary.reserved > 0 && <p className="reserved">{taka(wallet.summary.reserved)} is set aside for a transfer that is not finished</p>}
       </header>
       <nav className="tabs" aria-label="Sections">
-        {TABS.map(([id, label]) => <button key={id} className={tab === id ? 'on' : ''} onClick={() => setTab(id)}>{label}</button>)}
+        {TABS.map(([id, label, icon, bangla]) => <button key={id} className={tab === id ? 'on' : ''} onClick={() => setTab(id)}><Icon name={icon} size={22}/><span>{label}<small lang="bn">{bangla}</small></span></button>)}
       </nav>
       {error && <p className="error" role="alert">{error}</p>}
       {!wallet && !error && <div className="panel skeleton" aria-hidden="true"><i /><i /><i /></div>}
-      {wallet && tab === 'home' && <Home wallet={wallet} demo={user.demo_mode} reload={load} />}
+      {wallet && tab === 'home' && <Home wallet={wallet} demo={false} reload={load} />}
       {tab === 'check' && <ContactCheck />}
       {wallet && tab === 'privacy' && <Privacy wallet={wallet} reload={load} />}
       <p className="fine centre">Preview with virtual money and synthetic history.</p>
@@ -108,7 +108,7 @@ function Send({ wallet, demo, reload }) {
   return (
     <form className="panel" onSubmit={submit}>
       <Steps labels={STEPS} current={0} />
-      <h2>Send money</h2>
+      <h2>Send money <span className="section-bangla" lang="bn">টাকা পাঠান</span></h2>
       {wallet.saved_recipients.length > 0 && <div className="people" role="group" aria-label="People you pay often">
         {wallet.saved_recipients.slice(0, 4).map((r, i) => (
           <button type="button" key={r.id} className={form.recipient === r.id ? 'on' : ''} aria-pressed={form.recipient === r.id} onClick={() => setForm({ ...form, recipient: r.id })}>

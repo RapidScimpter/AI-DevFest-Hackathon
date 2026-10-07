@@ -1,0 +1,3402 @@
+{
+  "U0000": {
+    "median_amount": 548.8,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D0",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R0-2",
+      "NEW_RECIPIENT",
+      "R0-0",
+      "R0-3",
+      "R0-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0001": {
+    "median_amount": 1625.9899999999998,
+    "district": "Chattogram",
+    "known_devices": [
+      "D1",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R1-0",
+      "R1-1",
+      "R1-2",
+      "NEW_RECIPIENT",
+      "R1-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0002": {
+    "median_amount": 1091.0149999999999,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D2",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R2-2",
+      "NEW_RECIPIENT",
+      "R2-3",
+      "R2-1",
+      "R2-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0003": {
+    "median_amount": 1088.04,
+    "district": "Sylhet",
+    "known_devices": [
+      "D3",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R3-3",
+      "R3-1",
+      "R3-2",
+      "NEW_RECIPIENT",
+      "R3-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0004": {
+    "median_amount": 1741.07,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D4",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R4-1",
+      "R4-3",
+      "NEW_RECIPIENT",
+      "R4-0",
+      "R4-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0005": {
+    "median_amount": 2412.75,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D5",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R5-2",
+      "R5-3",
+      "NEW_RECIPIENT",
+      "R5-0",
+      "R5-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0006": {
+    "median_amount": 1506.785,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D6",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R6-3",
+      "R6-2",
+      "NEW_RECIPIENT",
+      "R6-1",
+      "R6-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0007": {
+    "median_amount": 1555.885,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D7",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R7-0",
+      "R7-2",
+      "R7-3",
+      "R7-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0008": {
+    "median_amount": 384.79499999999996,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D8",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R8-0",
+      "NEW_RECIPIENT",
+      "R8-1",
+      "R8-3",
+      "R8-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0009": {
+    "median_amount": 1537.3249999999998,
+    "district": "Sylhet",
+    "known_devices": [
+      "D9",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R9-1",
+      "R9-2",
+      "R9-3",
+      "R9-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0010": {
+    "median_amount": 2060.325,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D10"
+    ],
+    "known_recipients": [
+      "R10-2",
+      "NEW_RECIPIENT",
+      "R10-0",
+      "R10-1",
+      "R10-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0011": {
+    "median_amount": 2369.85,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D11"
+    ],
+    "known_recipients": [
+      "R11-3",
+      "NEW_RECIPIENT",
+      "R11-0",
+      "R11-1",
+      "R11-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0012": {
+    "median_amount": 1780.25,
+    "district": "Sylhet",
+    "known_devices": [
+      "D12",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R12-2",
+      "R12-1",
+      "R12-3",
+      "R12-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0013": {
+    "median_amount": 1688.49,
+    "district": "Dhaka",
+    "known_devices": [
+      "D13",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R13-1",
+      "R13-0",
+      "R13-2",
+      "NEW_RECIPIENT",
+      "R13-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0014": {
+    "median_amount": 415.185,
+    "district": "Dhaka",
+    "known_devices": [
+      "D14",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R14-3",
+      "R14-2",
+      "NEW_RECIPIENT",
+      "R14-0",
+      "R14-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0015": {
+    "median_amount": 2170.955,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D15",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R15-3",
+      "R15-2",
+      "R15-0",
+      "R15-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0016": {
+    "median_amount": 1247.705,
+    "district": "Sylhet",
+    "known_devices": [
+      "D16",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R16-0",
+      "R16-2",
+      "R16-3",
+      "R16-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0017": {
+    "median_amount": 2284.02,
+    "district": "Rajshahi",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D17"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R17-0",
+      "R17-1",
+      "R17-2",
+      "R17-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0018": {
+    "median_amount": 1836.6,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D18"
+    ],
+    "known_recipients": [
+      "R18-1",
+      "R18-3",
+      "NEW_RECIPIENT",
+      "R18-2",
+      "R18-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0019": {
+    "median_amount": 1148.525,
+    "district": "Dhaka",
+    "known_devices": [
+      "D19",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R19-1",
+      "R19-0",
+      "R19-3",
+      "R19-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0020": {
+    "median_amount": 1561.1350000000002,
+    "district": "Chattogram",
+    "known_devices": [
+      "D20",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R20-2",
+      "R20-0",
+      "R20-1",
+      "R20-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0021": {
+    "median_amount": 1446.455,
+    "district": "Sylhet",
+    "known_devices": [
+      "D21",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R21-2",
+      "R21-3",
+      "R21-0",
+      "R21-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0022": {
+    "median_amount": 1588.73,
+    "district": "Chattogram",
+    "known_devices": [
+      "D22",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R22-0",
+      "R22-1",
+      "R22-2",
+      "R22-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0023": {
+    "median_amount": 1370.9050000000002,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D23",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R23-0",
+      "R23-1",
+      "R23-2",
+      "R23-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0024": {
+    "median_amount": 1125.415,
+    "district": "Dhaka",
+    "known_devices": [
+      "D24",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R24-3",
+      "R24-1",
+      "R24-0",
+      "R24-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0025": {
+    "median_amount": 1213.395,
+    "district": "Dhaka",
+    "known_devices": [
+      "D25",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R25-1",
+      "R25-2",
+      "R25-3",
+      "R25-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0026": {
+    "median_amount": 2544.645,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D26",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R26-1",
+      "NEW_RECIPIENT",
+      "R26-3",
+      "R26-0",
+      "R26-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0027": {
+    "median_amount": 2311.005,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D27"
+    ],
+    "known_recipients": [
+      "R27-3",
+      "R27-2",
+      "R27-0",
+      "NEW_RECIPIENT",
+      "R27-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0028": {
+    "median_amount": 1621.795,
+    "district": "Dhaka",
+    "known_devices": [
+      "D28",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R28-2",
+      "R28-0",
+      "R28-1",
+      "R28-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0029": {
+    "median_amount": 1634.77,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D29",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R29-3",
+      "R29-1",
+      "R29-0",
+      "R29-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0030": {
+    "median_amount": 1744.545,
+    "district": "Sylhet",
+    "known_devices": [
+      "D30",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R30-1",
+      "R30-2",
+      "R30-3",
+      "R30-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0031": {
+    "median_amount": 1251.56,
+    "district": "Chattogram",
+    "known_devices": [
+      "D31",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R31-0",
+      "R31-1",
+      "R31-2",
+      "NEW_RECIPIENT",
+      "R31-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0032": {
+    "median_amount": 1770.375,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D32"
+    ],
+    "known_recipients": [
+      "R32-1",
+      "R32-0",
+      "R32-2",
+      "NEW_RECIPIENT",
+      "R32-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0033": {
+    "median_amount": 1473.4899999999998,
+    "district": "Sylhet",
+    "known_devices": [
+      "D33",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R33-0",
+      "R33-2",
+      "NEW_RECIPIENT",
+      "R33-3",
+      "R33-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0034": {
+    "median_amount": 755.66,
+    "district": "Chattogram",
+    "known_devices": [
+      "D34",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R34-1",
+      "R34-3",
+      "R34-2",
+      "R34-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0035": {
+    "median_amount": 1256.335,
+    "district": "Dhaka",
+    "known_devices": [
+      "D35",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R35-1",
+      "R35-3",
+      "R35-2",
+      "R35-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0036": {
+    "median_amount": 831.28,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D36",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R36-3",
+      "R36-0",
+      "R36-2",
+      "R36-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0037": {
+    "median_amount": 2561.265,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D37",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R37-0",
+      "R37-3",
+      "R37-1",
+      "R37-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0038": {
+    "median_amount": 2577.9399999999996,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D38",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R38-0",
+      "R38-1",
+      "R38-3",
+      "R38-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0039": {
+    "median_amount": 2407.24,
+    "district": "Dhaka",
+    "known_devices": [
+      "D39",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R39-1",
+      "R39-2",
+      "R39-3",
+      "R39-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0040": {
+    "median_amount": 1792.01,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D40",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R40-2",
+      "NEW_RECIPIENT",
+      "R40-0",
+      "R40-1",
+      "R40-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0041": {
+    "median_amount": 1851.72,
+    "district": "Dhaka",
+    "known_devices": [
+      "D41",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R41-3",
+      "NEW_RECIPIENT",
+      "R41-1",
+      "R41-0",
+      "R41-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0042": {
+    "median_amount": 582.895,
+    "district": "Dhaka",
+    "known_devices": [
+      "D42",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R42-3",
+      "R42-2",
+      "NEW_RECIPIENT",
+      "R42-1",
+      "R42-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0043": {
+    "median_amount": 1914.02,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D43",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R43-1",
+      "R43-2",
+      "NEW_RECIPIENT",
+      "R43-3",
+      "R43-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0044": {
+    "median_amount": 1060.9899999999998,
+    "district": "Sylhet",
+    "known_devices": [
+      "D44",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R44-2",
+      "R44-0",
+      "R44-1",
+      "R44-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0045": {
+    "median_amount": 2275.51,
+    "district": "Chattogram",
+    "known_devices": [
+      "D45",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R45-0",
+      "R45-1",
+      "NEW_RECIPIENT",
+      "R45-2",
+      "R45-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0046": {
+    "median_amount": 917.475,
+    "district": "Chattogram",
+    "known_devices": [
+      "D46",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R46-2",
+      "R46-0",
+      "NEW_RECIPIENT",
+      "R46-3",
+      "R46-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0047": {
+    "median_amount": 914.41,
+    "district": "Chattogram",
+    "known_devices": [
+      "D47",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R47-0",
+      "R47-1",
+      "R47-3",
+      "R47-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0048": {
+    "median_amount": 2192.71,
+    "district": "Sylhet",
+    "known_devices": [
+      "D48",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R48-1",
+      "R48-0",
+      "R48-3",
+      "R48-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0049": {
+    "median_amount": 2543.4849999999997,
+    "district": "Dhaka",
+    "known_devices": [
+      "D49",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R49-0",
+      "R49-3",
+      "R49-1",
+      "R49-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0050": {
+    "median_amount": 2367.74,
+    "district": "Dhaka",
+    "known_devices": [
+      "D50",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R50-0",
+      "R50-1",
+      "R50-3",
+      "NEW_RECIPIENT",
+      "R50-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0051": {
+    "median_amount": 1933.915,
+    "district": "Dhaka",
+    "known_devices": [
+      "D51",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R51-1",
+      "R51-2",
+      "R51-3",
+      "R51-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0052": {
+    "median_amount": 1668.94,
+    "district": "Sylhet",
+    "known_devices": [
+      "D52",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R52-0",
+      "R52-1",
+      "NEW_RECIPIENT",
+      "R52-2",
+      "R52-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0053": {
+    "median_amount": 820.6700000000001,
+    "district": "Chattogram",
+    "known_devices": [
+      "D53",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R53-1",
+      "NEW_RECIPIENT",
+      "R53-0",
+      "R53-3",
+      "R53-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0054": {
+    "median_amount": 2080.105,
+    "district": "Dhaka",
+    "known_devices": [
+      "D54",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R54-1",
+      "R54-3",
+      "R54-2",
+      "NEW_RECIPIENT",
+      "R54-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0055": {
+    "median_amount": 729.955,
+    "district": "Chattogram",
+    "known_devices": [
+      "D55",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R55-1",
+      "R55-2",
+      "R55-0",
+      "R55-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0056": {
+    "median_amount": 1158.04,
+    "district": "Rajshahi",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D56"
+    ],
+    "known_recipients": [
+      "R56-1",
+      "R56-2",
+      "R56-0",
+      "NEW_RECIPIENT",
+      "R56-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0057": {
+    "median_amount": 1099.81,
+    "district": "Dhaka",
+    "known_devices": [
+      "D57",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R57-3",
+      "R57-0",
+      "R57-2",
+      "NEW_RECIPIENT",
+      "R57-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0058": {
+    "median_amount": 1276.71,
+    "district": "Chattogram",
+    "known_devices": [
+      "D58",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R58-3",
+      "R58-0",
+      "R58-2",
+      "R58-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0059": {
+    "median_amount": 1552.105,
+    "district": "Sylhet",
+    "known_devices": [
+      "D59",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R59-0",
+      "R59-2",
+      "NEW_RECIPIENT",
+      "R59-1",
+      "R59-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0060": {
+    "median_amount": 1143.495,
+    "district": "Sylhet",
+    "known_devices": [
+      "D60",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R60-2",
+      "R60-0",
+      "R60-1",
+      "R60-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0061": {
+    "median_amount": 1231.0349999999999,
+    "district": "Dhaka",
+    "known_devices": [
+      "D61",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R61-1",
+      "R61-2",
+      "R61-3",
+      "NEW_RECIPIENT",
+      "R61-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0062": {
+    "median_amount": 814.71,
+    "district": "Sylhet",
+    "known_devices": [
+      "D62",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R62-2",
+      "R62-1",
+      "NEW_RECIPIENT",
+      "R62-0",
+      "R62-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0063": {
+    "median_amount": 927.22,
+    "district": "Chattogram",
+    "known_devices": [
+      "D63",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R63-2",
+      "R63-0",
+      "R63-1",
+      "NEW_RECIPIENT",
+      "R63-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0064": {
+    "median_amount": 1664.815,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D64",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R64-1",
+      "NEW_RECIPIENT",
+      "R64-0",
+      "R64-2",
+      "R64-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0065": {
+    "median_amount": 362.355,
+    "district": "Rajshahi",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D65"
+    ],
+    "known_recipients": [
+      "R65-3",
+      "NEW_RECIPIENT",
+      "R65-0",
+      "R65-2",
+      "R65-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0066": {
+    "median_amount": 899.255,
+    "district": "Chattogram",
+    "known_devices": [
+      "D66",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R66-0",
+      "R66-1",
+      "R66-3",
+      "NEW_RECIPIENT",
+      "R66-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0067": {
+    "median_amount": 472.06,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D67"
+    ],
+    "known_recipients": [
+      "R67-1",
+      "R67-0",
+      "R67-2",
+      "R67-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0068": {
+    "median_amount": 1382.48,
+    "district": "Chattogram",
+    "known_devices": [
+      "D68",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R68-1",
+      "NEW_RECIPIENT",
+      "R68-3",
+      "R68-0",
+      "R68-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0069": {
+    "median_amount": 3126.795,
+    "district": "Chattogram",
+    "known_devices": [
+      "D69",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R69-1",
+      "R69-2",
+      "R69-0",
+      "R69-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0070": {
+    "median_amount": 942.7,
+    "district": "Chattogram",
+    "known_devices": [
+      "D70",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R70-2",
+      "R70-1",
+      "NEW_RECIPIENT",
+      "R70-0",
+      "R70-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0071": {
+    "median_amount": 1914.2849999999999,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D71",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R71-3",
+      "R71-1",
+      "NEW_RECIPIENT",
+      "R71-2",
+      "R71-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0072": {
+    "median_amount": 1653.505,
+    "district": "Dhaka",
+    "known_devices": [
+      "D72",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R72-2",
+      "R72-1",
+      "R72-3",
+      "R72-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0073": {
+    "median_amount": 1351.37,
+    "district": "Chattogram",
+    "known_devices": [
+      "D73",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R73-2",
+      "R73-3",
+      "R73-1",
+      "NEW_RECIPIENT",
+      "R73-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0074": {
+    "median_amount": 571.5999999999999,
+    "district": "Chattogram",
+    "known_devices": [
+      "D74",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R74-0",
+      "R74-2",
+      "R74-3",
+      "NEW_RECIPIENT",
+      "R74-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0075": {
+    "median_amount": 1429.9299999999998,
+    "district": "Chattogram",
+    "known_devices": [
+      "D75",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R75-1",
+      "R75-3",
+      "NEW_RECIPIENT",
+      "R75-2",
+      "R75-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0076": {
+    "median_amount": 1890.695,
+    "district": "Dhaka",
+    "known_devices": [
+      "D76",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R76-3",
+      "R76-2",
+      "R76-0",
+      "NEW_RECIPIENT",
+      "R76-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0077": {
+    "median_amount": 1753.25,
+    "district": "Sylhet",
+    "known_devices": [
+      "D77",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R77-3",
+      "R77-1",
+      "R77-0",
+      "NEW_RECIPIENT",
+      "R77-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0078": {
+    "median_amount": 668.71,
+    "district": "Sylhet",
+    "known_devices": [
+      "D78",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R78-3",
+      "R78-0",
+      "R78-1",
+      "R78-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0079": {
+    "median_amount": 432.76,
+    "district": "Dhaka",
+    "known_devices": [
+      "D79",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R79-2",
+      "R79-1",
+      "R79-0",
+      "R79-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0080": {
+    "median_amount": 1920.775,
+    "district": "Dhaka",
+    "known_devices": [
+      "D80",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R80-2",
+      "R80-3",
+      "R80-1",
+      "R80-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0081": {
+    "median_amount": 830.265,
+    "district": "Chattogram",
+    "known_devices": [
+      "D81",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R81-3",
+      "R81-2",
+      "R81-1",
+      "NEW_RECIPIENT",
+      "R81-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0082": {
+    "median_amount": 828.21,
+    "district": "Chattogram",
+    "known_devices": [
+      "D82",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R82-3",
+      "R82-0",
+      "R82-2",
+      "R82-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0083": {
+    "median_amount": 327.785,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D83",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R83-0",
+      "R83-1",
+      "R83-2",
+      "NEW_RECIPIENT",
+      "R83-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0084": {
+    "median_amount": 1494.615,
+    "district": "Dhaka",
+    "known_devices": [
+      "D84",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R84-2",
+      "R84-1",
+      "R84-3",
+      "R84-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0085": {
+    "median_amount": 1852.8600000000001,
+    "district": "Chattogram",
+    "known_devices": [
+      "D85",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R85-0",
+      "R85-3",
+      "R85-1",
+      "R85-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0086": {
+    "median_amount": 1356.44,
+    "district": "Sylhet",
+    "known_devices": [
+      "D86",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R86-1",
+      "NEW_RECIPIENT",
+      "R86-2",
+      "R86-0",
+      "R86-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0087": {
+    "median_amount": 2671.41,
+    "district": "Chattogram",
+    "known_devices": [
+      "D87",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R87-1",
+      "R87-0",
+      "R87-3",
+      "NEW_RECIPIENT",
+      "R87-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0088": {
+    "median_amount": 2239.3999999999996,
+    "district": "Dhaka",
+    "known_devices": [
+      "D88",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R88-3",
+      "R88-1",
+      "R88-2",
+      "R88-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0089": {
+    "median_amount": 1765.4299999999998,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D89",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R89-2",
+      "NEW_RECIPIENT",
+      "R89-3",
+      "R89-1",
+      "R89-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0090": {
+    "median_amount": 1231.465,
+    "district": "Sylhet",
+    "known_devices": [
+      "D90",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R90-0",
+      "R90-1",
+      "R90-3",
+      "R90-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0091": {
+    "median_amount": 1176.7649999999999,
+    "district": "Chattogram",
+    "known_devices": [
+      "D91",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R91-3",
+      "R91-1",
+      "R91-0",
+      "R91-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0092": {
+    "median_amount": 1582.9,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D92",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R92-2",
+      "NEW_RECIPIENT",
+      "R92-0",
+      "R92-1",
+      "R92-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0093": {
+    "median_amount": 580.635,
+    "district": "Sylhet",
+    "known_devices": [
+      "D93",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R93-3",
+      "R93-2",
+      "NEW_RECIPIENT",
+      "R93-1",
+      "R93-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0094": {
+    "median_amount": 3030.8900000000003,
+    "district": "Chattogram",
+    "known_devices": [
+      "D94",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R94-0",
+      "R94-3",
+      "NEW_RECIPIENT",
+      "R94-1",
+      "R94-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0095": {
+    "median_amount": 759.97,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D95"
+    ],
+    "known_recipients": [
+      "R95-1",
+      "R95-0",
+      "NEW_RECIPIENT",
+      "R95-2",
+      "R95-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0096": {
+    "median_amount": 1662.98,
+    "district": "Dhaka",
+    "known_devices": [
+      "D96",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R96-2",
+      "R96-3",
+      "R96-0",
+      "NEW_RECIPIENT",
+      "R96-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0097": {
+    "median_amount": 2936.335,
+    "district": "Chattogram",
+    "known_devices": [
+      "D97",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R97-0",
+      "R97-3",
+      "R97-2",
+      "R97-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0098": {
+    "median_amount": 1490.09,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D98",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R98-0",
+      "R98-3",
+      "R98-1",
+      "R98-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0099": {
+    "median_amount": 1893.18,
+    "district": "Chattogram",
+    "known_devices": [
+      "D99",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R99-0",
+      "NEW_RECIPIENT",
+      "R99-3",
+      "R99-1",
+      "R99-2"
+    ],
+    "start_hour": 5,
+    "end_hour": 22
+  },
+  "U0100": {
+    "median_amount": 2463.3900000000003,
+    "district": "Sylhet",
+    "known_devices": [
+      "D100",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R100-0",
+      "NEW_RECIPIENT",
+      "R100-2",
+      "R100-1",
+      "R100-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0101": {
+    "median_amount": 1650.935,
+    "district": "Sylhet",
+    "known_devices": [
+      "D101",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R101-0",
+      "R101-1",
+      "R101-3",
+      "R101-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0102": {
+    "median_amount": 1515.6599999999999,
+    "district": "Chattogram",
+    "known_devices": [
+      "D102",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R102-0",
+      "R102-2",
+      "R102-3",
+      "R102-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0103": {
+    "median_amount": 2383.0600000000004,
+    "district": "Chattogram",
+    "known_devices": [
+      "D103",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R103-1",
+      "NEW_RECIPIENT",
+      "R103-0",
+      "R103-3",
+      "R103-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0104": {
+    "median_amount": 388.03499999999997,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D104",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R104-0",
+      "R104-1",
+      "R104-3",
+      "R104-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0105": {
+    "median_amount": 2177.725,
+    "district": "Chattogram",
+    "known_devices": [
+      "D105",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R105-2",
+      "R105-1",
+      "R105-3",
+      "R105-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0106": {
+    "median_amount": 1945.885,
+    "district": "Dhaka",
+    "known_devices": [
+      "D106",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R106-2",
+      "NEW_RECIPIENT",
+      "R106-1",
+      "R106-3",
+      "R106-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0107": {
+    "median_amount": 1074.755,
+    "district": "Sylhet",
+    "known_devices": [
+      "D107",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R107-0",
+      "NEW_RECIPIENT",
+      "R107-1",
+      "R107-2",
+      "R107-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0108": {
+    "median_amount": 400.96500000000003,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D108",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R108-3",
+      "R108-1",
+      "R108-2",
+      "R108-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0109": {
+    "median_amount": 2004.75,
+    "district": "Sylhet",
+    "known_devices": [
+      "D109",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R109-0",
+      "R109-3",
+      "R109-2",
+      "NEW_RECIPIENT",
+      "R109-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0110": {
+    "median_amount": 404.595,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D110"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R110-1",
+      "R110-3",
+      "R110-2",
+      "R110-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0111": {
+    "median_amount": 2135.105,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D111",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R111-1",
+      "R111-3",
+      "R111-2",
+      "R111-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0112": {
+    "median_amount": 1350.685,
+    "district": "Sylhet",
+    "known_devices": [
+      "D112",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R112-0",
+      "R112-3",
+      "R112-2",
+      "NEW_RECIPIENT",
+      "R112-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0113": {
+    "median_amount": 1589.03,
+    "district": "Chattogram",
+    "known_devices": [
+      "D113",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R113-1",
+      "R113-0",
+      "NEW_RECIPIENT",
+      "R113-2",
+      "R113-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0114": {
+    "median_amount": 869.5150000000001,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D114",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R114-2",
+      "NEW_RECIPIENT",
+      "R114-0",
+      "R114-3",
+      "R114-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0115": {
+    "median_amount": 1536.66,
+    "district": "Rajshahi",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D115"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R115-0",
+      "R115-2",
+      "R115-3",
+      "R115-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0116": {
+    "median_amount": 1154.005,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D116",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R116-2",
+      "R116-3",
+      "R116-1",
+      "R116-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0117": {
+    "median_amount": 1309.1799999999998,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D117",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R117-3",
+      "R117-0",
+      "R117-1",
+      "NEW_RECIPIENT",
+      "R117-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0118": {
+    "median_amount": 1747.26,
+    "district": "Dhaka",
+    "known_devices": [
+      "D118",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R118-0",
+      "R118-3",
+      "NEW_RECIPIENT",
+      "R118-2",
+      "R118-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0119": {
+    "median_amount": 2239.5950000000003,
+    "district": "Dhaka",
+    "known_devices": [
+      "D119",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R119-3",
+      "R119-0",
+      "R119-2",
+      "NEW_RECIPIENT",
+      "R119-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0120": {
+    "median_amount": 2746.635,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D120",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R120-2",
+      "R120-1",
+      "NEW_RECIPIENT",
+      "R120-3",
+      "R120-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0121": {
+    "median_amount": 1240.1399999999999,
+    "district": "Sylhet",
+    "known_devices": [
+      "D121",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R121-0",
+      "R121-2",
+      "NEW_RECIPIENT",
+      "R121-1",
+      "R121-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0122": {
+    "median_amount": 703.87,
+    "district": "Dhaka",
+    "known_devices": [
+      "D122",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R122-0",
+      "R122-1",
+      "R122-3",
+      "NEW_RECIPIENT",
+      "R122-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0123": {
+    "median_amount": 514.86,
+    "district": "Dhaka",
+    "known_devices": [
+      "D123",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R123-3",
+      "NEW_RECIPIENT",
+      "R123-1",
+      "R123-0",
+      "R123-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0124": {
+    "median_amount": 1146.385,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D124",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R124-3",
+      "R124-0",
+      "R124-1",
+      "NEW_RECIPIENT",
+      "R124-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0125": {
+    "median_amount": 640.72,
+    "district": "Dhaka",
+    "known_devices": [
+      "D125",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R125-1",
+      "NEW_RECIPIENT",
+      "R125-2",
+      "R125-3",
+      "R125-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0126": {
+    "median_amount": 1956.92,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D126",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R126-3",
+      "R126-1",
+      "R126-2",
+      "R126-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0127": {
+    "median_amount": 951.995,
+    "district": "Dhaka",
+    "known_devices": [
+      "D127",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R127-0",
+      "R127-2",
+      "R127-3",
+      "NEW_RECIPIENT",
+      "R127-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0128": {
+    "median_amount": 3723.69,
+    "district": "Sylhet",
+    "known_devices": [
+      "D128",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R128-2",
+      "NEW_RECIPIENT",
+      "R128-3",
+      "R128-1",
+      "R128-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0129": {
+    "median_amount": 1838.4,
+    "district": "Dhaka",
+    "known_devices": [
+      "D129",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R129-2",
+      "NEW_RECIPIENT",
+      "R129-0",
+      "R129-3",
+      "R129-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0130": {
+    "median_amount": 1997.47,
+    "district": "Sylhet",
+    "known_devices": [
+      "D130",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R130-3",
+      "R130-0",
+      "R130-1",
+      "NEW_RECIPIENT",
+      "R130-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0131": {
+    "median_amount": 1296.125,
+    "district": "Dhaka",
+    "known_devices": [
+      "D131",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R131-1",
+      "R131-2",
+      "R131-0",
+      "NEW_RECIPIENT",
+      "R131-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0132": {
+    "median_amount": 1943.64,
+    "district": "Dhaka",
+    "known_devices": [
+      "D132",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R132-3",
+      "NEW_RECIPIENT",
+      "R132-2",
+      "R132-1",
+      "R132-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0133": {
+    "median_amount": 1837.21,
+    "district": "Dhaka",
+    "known_devices": [
+      "D133",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R133-3",
+      "NEW_RECIPIENT",
+      "R133-2",
+      "R133-1",
+      "R133-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0134": {
+    "median_amount": 1665.0,
+    "district": "Chattogram",
+    "known_devices": [
+      "D134",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R134-0",
+      "R134-2",
+      "R134-1",
+      "R134-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0135": {
+    "median_amount": 562.56,
+    "district": "Sylhet",
+    "known_devices": [
+      "D135",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R135-2",
+      "R135-1",
+      "R135-0",
+      "R135-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0136": {
+    "median_amount": 796.1,
+    "district": "Sylhet",
+    "known_devices": [
+      "D136",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R136-1",
+      "R136-3",
+      "R136-0",
+      "NEW_RECIPIENT",
+      "R136-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0137": {
+    "median_amount": 1194.87,
+    "district": "Dhaka",
+    "known_devices": [
+      "D137",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R137-2",
+      "NEW_RECIPIENT",
+      "R137-1",
+      "R137-3",
+      "R137-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0138": {
+    "median_amount": 2028.65,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D138",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R138-1",
+      "R138-0",
+      "R138-3",
+      "R138-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0139": {
+    "median_amount": 2225.84,
+    "district": "Dhaka",
+    "known_devices": [
+      "D139",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R139-0",
+      "R139-1",
+      "R139-3",
+      "R139-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0140": {
+    "median_amount": 2190.01,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D140",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R140-0",
+      "R140-3",
+      "R140-2",
+      "R140-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0141": {
+    "median_amount": 2323.835,
+    "district": "Chattogram",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D141"
+    ],
+    "known_recipients": [
+      "R141-1",
+      "NEW_RECIPIENT",
+      "R141-0",
+      "R141-3",
+      "R141-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0142": {
+    "median_amount": 850.985,
+    "district": "Chattogram",
+    "known_devices": [
+      "D142",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R142-0",
+      "R142-3",
+      "R142-1",
+      "R142-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0143": {
+    "median_amount": 2091.57,
+    "district": "Chattogram",
+    "known_devices": [
+      "D143",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R143-0",
+      "R143-3",
+      "NEW_RECIPIENT",
+      "R143-2",
+      "R143-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0144": {
+    "median_amount": 763.075,
+    "district": "Chattogram",
+    "known_devices": [
+      "D144",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R144-1",
+      "R144-3",
+      "NEW_RECIPIENT",
+      "R144-2",
+      "R144-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0145": {
+    "median_amount": 2005.5149999999999,
+    "district": "Chattogram",
+    "known_devices": [
+      "D145",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R145-2",
+      "NEW_RECIPIENT",
+      "R145-1",
+      "R145-0",
+      "R145-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0146": {
+    "median_amount": 1770.67,
+    "district": "Dhaka",
+    "known_devices": [
+      "D146",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R146-2",
+      "R146-3",
+      "R146-0",
+      "R146-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0147": {
+    "median_amount": 879.3199999999999,
+    "district": "Dhaka",
+    "known_devices": [
+      "D147",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R147-2",
+      "NEW_RECIPIENT",
+      "R147-1",
+      "R147-0",
+      "R147-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0148": {
+    "median_amount": 1678.44,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D148",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R148-1",
+      "R148-0",
+      "R148-3",
+      "R148-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0149": {
+    "median_amount": 1720.9099999999999,
+    "district": "Chattogram",
+    "known_devices": [
+      "D149",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R149-2",
+      "NEW_RECIPIENT",
+      "R149-0",
+      "R149-3",
+      "R149-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0150": {
+    "median_amount": 417.605,
+    "district": "Dhaka",
+    "known_devices": [
+      "D150",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R150-1",
+      "NEW_RECIPIENT",
+      "R150-0",
+      "R150-3",
+      "R150-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0151": {
+    "median_amount": 2452.0299999999997,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D151"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R151-0",
+      "R151-1",
+      "R151-2",
+      "R151-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0152": {
+    "median_amount": 543.58,
+    "district": "Sylhet",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D152"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R152-3",
+      "R152-1",
+      "R152-0",
+      "R152-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0153": {
+    "median_amount": 2301.2349999999997,
+    "district": "Sylhet",
+    "known_devices": [
+      "D153",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R153-3",
+      "NEW_RECIPIENT",
+      "R153-0",
+      "R153-1",
+      "R153-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0154": {
+    "median_amount": 1453.935,
+    "district": "Dhaka",
+    "known_devices": [
+      "D154",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R154-2",
+      "NEW_RECIPIENT",
+      "R154-1",
+      "R154-0",
+      "R154-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0155": {
+    "median_amount": 784.1700000000001,
+    "district": "Sylhet",
+    "known_devices": [
+      "D155",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R155-0",
+      "R155-3",
+      "R155-2",
+      "R155-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0156": {
+    "median_amount": 1790.8249999999998,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D156",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R156-3",
+      "NEW_RECIPIENT",
+      "R156-2",
+      "R156-0",
+      "R156-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0157": {
+    "median_amount": 1937.81,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D157",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R157-0",
+      "NEW_RECIPIENT",
+      "R157-1",
+      "R157-3",
+      "R157-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0158": {
+    "median_amount": 2497.68,
+    "district": "Dhaka",
+    "known_devices": [
+      "D158",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R158-2",
+      "R158-3",
+      "R158-1",
+      "NEW_RECIPIENT",
+      "R158-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0159": {
+    "median_amount": 2317.445,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D159",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R159-2",
+      "R159-3",
+      "R159-0",
+      "R159-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0160": {
+    "median_amount": 2418.5,
+    "district": "Sylhet",
+    "known_devices": [
+      "D160",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R160-0",
+      "R160-2",
+      "R160-1",
+      "R160-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0161": {
+    "median_amount": 497.22,
+    "district": "Sylhet",
+    "known_devices": [
+      "D161",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R161-0",
+      "R161-1",
+      "R161-3",
+      "R161-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0162": {
+    "median_amount": 1035.2150000000001,
+    "district": "Chattogram",
+    "known_devices": [
+      "D162",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R162-1",
+      "R162-2",
+      "R162-3",
+      "R162-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0163": {
+    "median_amount": 1549.0500000000002,
+    "district": "Chattogram",
+    "known_devices": [
+      "D163",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R163-2",
+      "R163-1",
+      "R163-3",
+      "NEW_RECIPIENT",
+      "R163-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0164": {
+    "median_amount": 1726.065,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D164",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R164-3",
+      "R164-2",
+      "R164-0",
+      "NEW_RECIPIENT",
+      "R164-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0165": {
+    "median_amount": 1260.545,
+    "district": "Sylhet",
+    "known_devices": [
+      "D165",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R165-3",
+      "R165-0",
+      "NEW_RECIPIENT",
+      "R165-1",
+      "R165-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0166": {
+    "median_amount": 1558.7150000000001,
+    "district": "Dhaka",
+    "known_devices": [
+      "D166",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R166-0",
+      "NEW_RECIPIENT",
+      "R166-2",
+      "R166-1",
+      "R166-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0167": {
+    "median_amount": 643.52,
+    "district": "Sylhet",
+    "known_devices": [
+      "D167",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R167-1",
+      "R167-0",
+      "R167-3",
+      "NEW_RECIPIENT",
+      "R167-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0168": {
+    "median_amount": 1775.515,
+    "district": "Sylhet",
+    "known_devices": [
+      "D168",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R168-3",
+      "R168-2",
+      "R168-0",
+      "R168-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0169": {
+    "median_amount": 698.315,
+    "district": "Chattogram",
+    "known_devices": [
+      "D169",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R169-1",
+      "R169-2",
+      "R169-0",
+      "R169-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0170": {
+    "median_amount": 1781.005,
+    "district": "Chattogram",
+    "known_devices": [
+      "D170",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R170-3",
+      "R170-0",
+      "R170-2",
+      "R170-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0171": {
+    "median_amount": 1783.085,
+    "district": "Dhaka",
+    "known_devices": [
+      "D171",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R171-1",
+      "NEW_RECIPIENT",
+      "R171-0",
+      "R171-2",
+      "R171-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0172": {
+    "median_amount": 335.11,
+    "district": "Chattogram",
+    "known_devices": [
+      "D172",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R172-2",
+      "R172-0",
+      "R172-1",
+      "R172-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0173": {
+    "median_amount": 1142.795,
+    "district": "Dhaka",
+    "known_devices": [
+      "D173",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R173-0",
+      "R173-3",
+      "NEW_RECIPIENT",
+      "R173-2",
+      "R173-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0174": {
+    "median_amount": 1824.56,
+    "district": "Chattogram",
+    "known_devices": [
+      "D174",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R174-2",
+      "R174-0",
+      "R174-3",
+      "R174-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0175": {
+    "median_amount": 1460.95,
+    "district": "Chattogram",
+    "known_devices": [
+      "D175",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R175-0",
+      "R175-1",
+      "NEW_RECIPIENT",
+      "R175-3",
+      "R175-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0176": {
+    "median_amount": 1553.885,
+    "district": "Sylhet",
+    "known_devices": [
+      "D176",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R176-1",
+      "R176-2",
+      "R176-3",
+      "R176-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0177": {
+    "median_amount": 1346.955,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D177",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R177-3",
+      "R177-2",
+      "R177-1",
+      "R177-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0178": {
+    "median_amount": 1032.17,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D178",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R178-3",
+      "NEW_RECIPIENT",
+      "R178-0",
+      "R178-1",
+      "R178-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0179": {
+    "median_amount": 779.8299999999999,
+    "district": "Dhaka",
+    "known_devices": [
+      "D179",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R179-1",
+      "NEW_RECIPIENT",
+      "R179-0",
+      "R179-2",
+      "R179-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0180": {
+    "median_amount": 2410.0550000000003,
+    "district": "Dhaka",
+    "known_devices": [
+      "D180",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R180-0",
+      "NEW_RECIPIENT",
+      "R180-2",
+      "R180-3",
+      "R180-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0181": {
+    "median_amount": 530.895,
+    "district": "Sylhet",
+    "known_devices": [
+      "D181",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R181-2",
+      "R181-3",
+      "R181-1",
+      "R181-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0182": {
+    "median_amount": 1715.76,
+    "district": "Rajshahi",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D182"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R182-2",
+      "R182-3",
+      "R182-0",
+      "R182-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0183": {
+    "median_amount": 2425.015,
+    "district": "Dhaka",
+    "known_devices": [
+      "D183",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R183-2",
+      "NEW_RECIPIENT",
+      "R183-1",
+      "R183-3",
+      "R183-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0184": {
+    "median_amount": 1823.545,
+    "district": "Chattogram",
+    "known_devices": [
+      "D184",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R184-0",
+      "R184-1",
+      "R184-3",
+      "R184-2",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0185": {
+    "median_amount": 568.3,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D185"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R185-3",
+      "R185-1",
+      "R185-2",
+      "R185-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0186": {
+    "median_amount": 1912.255,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D186",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R186-1",
+      "R186-3",
+      "NEW_RECIPIENT",
+      "R186-0",
+      "R186-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0187": {
+    "median_amount": 1795.15,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D187"
+    ],
+    "known_recipients": [
+      "R187-1",
+      "R187-2",
+      "R187-3",
+      "NEW_RECIPIENT",
+      "R187-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0188": {
+    "median_amount": 584.895,
+    "district": "Chattogram",
+    "known_devices": [
+      "D188",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R188-2",
+      "R188-0",
+      "R188-3",
+      "R188-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0189": {
+    "median_amount": 868.525,
+    "district": "Chattogram",
+    "known_devices": [
+      "D189",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R189-0",
+      "R189-2",
+      "R189-1",
+      "R189-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0190": {
+    "median_amount": 346.86,
+    "district": "Dhaka",
+    "known_devices": [
+      "D190",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R190-1",
+      "R190-2",
+      "R190-0",
+      "R190-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0191": {
+    "median_amount": 830.47,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D191",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R191-1",
+      "R191-2",
+      "R191-3",
+      "R191-0",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0192": {
+    "median_amount": 2899.41,
+    "district": "Chattogram",
+    "known_devices": [
+      "D192",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R192-2",
+      "NEW_RECIPIENT",
+      "R192-3",
+      "R192-0",
+      "R192-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 21
+  },
+  "U0193": {
+    "median_amount": 2314.76,
+    "district": "Sylhet",
+    "known_devices": [
+      "D193",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R193-3",
+      "R193-0",
+      "NEW_RECIPIENT",
+      "R193-2",
+      "R193-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0194": {
+    "median_amount": 1255.54,
+    "district": "Chattogram",
+    "known_devices": [
+      "D194",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R194-0",
+      "NEW_RECIPIENT",
+      "R194-2",
+      "R194-1",
+      "R194-3"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0195": {
+    "median_amount": 1803.2649999999999,
+    "district": "Rajshahi",
+    "known_devices": [
+      "D195",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R195-3",
+      "R195-2",
+      "R195-0",
+      "R195-1",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0196": {
+    "median_amount": 402.9,
+    "district": "Chattogram",
+    "known_devices": [
+      "D196",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "R196-3",
+      "R196-0",
+      "R196-1",
+      "NEW_RECIPIENT",
+      "R196-2"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  },
+  "U0197": {
+    "median_amount": 2026.6,
+    "district": "Dhaka",
+    "known_devices": [
+      "D197",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R197-2",
+      "R197-0",
+      "R197-3",
+      "R197-1"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0198": {
+    "median_amount": 2001.635,
+    "district": "Dhaka",
+    "known_devices": [
+      "D198",
+      "NEW_DEVICE"
+    ],
+    "known_recipients": [
+      "NEW_RECIPIENT",
+      "R198-2",
+      "R198-1",
+      "R198-3",
+      "R198-0"
+    ],
+    "start_hour": 9,
+    "end_hour": 23
+  },
+  "U0199": {
+    "median_amount": 317.52,
+    "district": "Dhaka",
+    "known_devices": [
+      "NEW_DEVICE",
+      "D199"
+    ],
+    "known_recipients": [
+      "R199-2",
+      "R199-0",
+      "R199-1",
+      "R199-3",
+      "NEW_RECIPIENT"
+    ],
+    "start_hour": 9,
+    "end_hour": 22
+  }
+}

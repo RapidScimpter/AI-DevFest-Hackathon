@@ -5,7 +5,7 @@ import { Icon } from './ui.jsx'
 const HEADLINE = {
   safe: ['This looks normal for you', 'Nothing unusual was found. Check the details, then confirm.'],
   caution: ['Take a moment to check', 'Something is a little different from your usual payments.'],
-  danger: ['Stop and check: this looks risky', 'Several warning signs match how fraud usually happens.'],
+  danger: ['Pause and review this transfer', 'These concerns need checking before you proceed. A warning is not proof of fraud.'],
 }
 
 // The verdict in plain words, then a safe-to-dangerous scale whose marker slides to the estimated risk.
@@ -19,8 +19,8 @@ export default function Meter({ review, staff = false }) {
     <div className={'meter ' + review.level}>
       <div className="verdict"><Icon name={review.level} size={40} /><div><strong>{staff ? review.status : title}</strong>{!staff && <p>{sub}</p>}</div></div>
       <div className="meter-track" role="img" aria-label={`Risk level: ${title}`}><span className="meter-pin" style={{ left: left + '%' }} /></div>
-      <div className="meter-scale"><span>Safe</span><span>Be careful</span><span>Dangerous</span></div>
-      {p != null && <p className="meter-read">Estimated chance this is fraud: <strong>{p < 0.01 ? 'under 1%' : p > 0.99 ? 'over 99%' : pct(p)}</strong></p>}
+      <div className="meter-scale"><span>Lower concern</span><span>Check carefully</span><span>Higher concern</span></div>
+      {staff && p != null && <p className="meter-read">Synthetic-model risk signal: <strong>{p < 0.01 ? 'under 1%' : p > 0.99 ? 'over 99%' : pct(p)}</strong></p>}
     </div>
   )
 }

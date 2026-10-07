@@ -101,16 +101,6 @@ def me(user: User = Depends(current_user)):
 
 
 @router.get('/demo')
-def demo_accounts(db: Session = Depends(get_db)):
-    """One-tap sign-in choices for presentations. Empty unless demo mode is on."""
-    if not settings.demo_mode:
-        return []
-    from ..seed import CUSTOMER_PASSWORD, STAFF
-    staff = {login: password for login, _, _, password in STAFF}
-    out = []
-    for u in db.scalars(select(User).where(User.is_active).order_by(User.id)):
-        if u.role == 'customer' and u.segment:
-            out.append({'name': u.name, 'login': '0' + u.login[4:], 'password': CUSTOMER_PASSWORD, 'role': 'customer'})
-        elif u.login == 'analyst':
-            out.append({'name': u.name, 'login': u.login, 'password': staff[u.login], 'role': 'analyst'})
-    return out
+def demo_accounts():
+    """Public account shortcuts are disabled; customers sign in normally."""
+    return []

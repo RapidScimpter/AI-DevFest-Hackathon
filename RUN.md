@@ -1,6 +1,6 @@
 # Running version 2 (FastAPI + React)
 
-README.md still describes the earlier Streamlit prototype; these are the current run steps.
+The root README now contains Windows startup instructions for this release. These are additional operator/developer steps.
 
 ## Quick start (Python 3.12 or 3.13)
 
@@ -12,7 +12,7 @@ python -m app.seed                   # demo accounts, wallet histories, sample r
 python -m uvicorn app.main:app --port 8000
 ```
 
-Open http://localhost:8000. Customers and analysts use the same address; the role decides what you see.
+Open http://localhost:8000. Customers and analysts use the same address; the role decides what you see. Enter credentials manually: the public demo account list and credential endpoint are disabled.
 
 | Account | Sign in | Password | Wallet PIN |
 |---|---|---|---|
