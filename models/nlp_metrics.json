@@ -1,0 +1,46 @@
+{
+  "model": "TF-IDF (character 2-5 grams + word 1-2 grams) + logistic regression",
+  "threshold": 0.5,
+  "train_messages": 5668,
+  "test_messages": 1907,
+  "held_out_bodies": 44,
+  "average_precision": 0.9729897209032328,
+  "brier": 0.05990523235578771,
+  "overall": {
+    "messages": 1907,
+    "precision": 0.9396479463537301,
+    "recall": 0.9573014517506405,
+    "false_positive_rate": 0.09782608695652174
+  },
+  "by_language": {
+    "en": {
+      "messages": 702,
+      "precision": 1.0,
+      "recall": 0.9522821576763485,
+      "false_positive_rate": 0.0
+    },
+    "bn": {
+      "messages": 680,
+      "precision": 0.9549019607843138,
+      "recall": 0.9474708171206225,
+      "false_positive_rate": 0.13855421686746988
+    },
+    "bl": {
+      "messages": 525,
+      "precision": 0.78125,
+      "recall": 1.0,
+      "false_positive_rate": 0.14
+    }
+  },
+  "recall_by_scam_category": {
+    "account_block_support": 1.0,
+    "advance_fee": 0.8333333333333334,
+    "credential_request": 1.0,
+    "investment_betting": 0.88,
+    "phishing_link": 1.0,
+    "refund_wrong_transfer": 1.0,
+    "remote_access": 0.9506172839506173
+  },
+  "category_accuracy": 0.8012585212375459,
+  "note": "Synthetic messages; test bodies are unseen phrasings. Real scam language will differ."
+}

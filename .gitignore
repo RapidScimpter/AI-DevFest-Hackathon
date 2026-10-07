@@ -2,6 +2,14 @@
 __pycache__/
 *.pyc
 .env
+<<<<<<< HEAD
+.pytest_cache/
+node_modules/
+data/*.sqlite3*
+data/transactions.csv
+data/drift_stream.csv
+data/messages.csv
+=======
 data/*.csv
 data/profiles.json
 models/*.joblib
@@ -12,3 +20,4 @@ data/*.sqlite3-*
 
 data/wallet.sqlite3
 data/wallet.sqlite3-*
+>>>>>>> 7b00f5f6904e253a8bedc6135cacf1e4182d5ef4

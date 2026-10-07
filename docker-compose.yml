@@ -1,0 +1,10 @@
+services:
+  wallet:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      SUROKKHA_SECRET_KEY: ${SUROKKHA_SECRET_KEY:-change-this-to-a-long-random-string-please}
+      SUROKKHA_DEMO_MODE: "true"
+    volumes: ["wallet-data:/srv/data"]
+volumes:
+  wallet-data:
